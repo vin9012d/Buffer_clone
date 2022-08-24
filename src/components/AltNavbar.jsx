@@ -3,6 +3,7 @@ import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { FaUserFriends } from "react-icons/fa";
 import { BsCaretDownFill } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
 
 const AltNavbar = () => {
   return (
@@ -128,8 +129,15 @@ const AltNavbar = () => {
             </Flex>
           </NavLink>
           <NavLink to="#">
-            <Flex>
-              
+            <Flex
+              alignItems="center"
+              p="1.2rem"
+              pl="28px"
+              pr="28px"
+              _hover={{ backgroundColor: "#F5F5F5" }}
+            >
+              <Text color="#D5C4BA">soumyanil22@gmail.com</Text>
+              <FaUserCircle h="20px" color="#121E66" />
             </Flex>
           </NavLink>
         </Flex>

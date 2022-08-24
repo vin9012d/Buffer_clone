@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import AltNavbar from "../components/AltNavbar";
 
 export const Publishing = () => {
   return (
-    <div>Publishing</div>
-  )
-}
+    <div>
+      <AltNavbar />
+      Publishing
+    </div>
+  );
+};

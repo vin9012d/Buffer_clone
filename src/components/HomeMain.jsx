@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Stack, Heading, Image, Button } from '@chakra-ui/react'
+import { Box, Container, Flex, Stack, VStack, Heading, Image, Button, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const HomeMain = () => {
@@ -29,10 +29,8 @@ const HomeMain = () => {
 					<Image
 						border="1px green solid"
 						src="https://buffer.com/static/illustrations/all-channels-3.webp"
-
 					/>
 				</Box>
-
 			</Flex>
 
 			{/* How to reach your customers */}
@@ -42,23 +40,25 @@ const HomeMain = () => {
 						Be where your customers are
 					</Heading>
 
-					<Container>
+					<Container mt="2rem" mb="4rem">
 						People spend, on average, almost 2.5 hours on social media every day.
 						Let them find your brand more easily through these four simple steps:
 					</Container>
-					<Stack direction='row' spacing={4} align='center'>
+					{/* <VStack direction='row' spacing={4} align='center' border="1px solid red">
 						<Button colorScheme='teal' variant='solid'>
 							Button
 						</Button>
 						<Button colorScheme='teal' variant='outline'>
 							Button
 						</Button>
-					</Stack>
+					</VStack> */}
 				</Box>
 				<Box maxW="100vw">
 					<Image src="https://buffer.com/static/misc/buffer-loop-v2.svg"
 						maxW="100%"
 						w="100%"
+						pt="4rem"
+						pb="4rem"
 						border="1px red solid"
 					/>
 				</Box>
@@ -66,31 +66,64 @@ const HomeMain = () => {
 			</Flex>
 
 			{/* Analyse part */}
-			<Flex align="center" border="2px red solid">
+			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
 				<Box border="solid 1px red">
-					<Heading as='h2' size='xl' noOfLines={1}>
+					<Heading as='h2' size='xl' noOfLines={2} >
 						Measure your social media performance in a few clicks
 					</Heading>
 
-					<Container>
+					<Container m="2rem -1rem">
 						See what’s working and deliver high engagement content.
 					</Container>
-					<Stack direction='row' spacing={4} align='center'>
+					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
 						<Button colorScheme='teal' variant='solid'>
-							Button
+							Get started now
 						</Button>
 						<Button colorScheme='teal' variant='outline'>
-							Button
+							Learn More
 						</Button>
 					</Stack>
 				</Box>
-				<Box maxW="100vw">
-					<Image src="https://buffer.com/static/illustrations/thumb-stop-content-2.webp"
+				<Box width="70%">
+					<Image
+						border="1px red solid"
+
+						src="https://buffer.com/static/illustrations/thumb-stop-content-2.webp"
 
 					/>
 				</Box>
 
 			</Flex>
+
+			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
+				<Box>
+					<Image
+						border="1px green solid"
+						src="https://buffer.com/static/illustrations/collaborate-more-efficiently@2x.webp"
+					/>
+				</Box>
+				<Box border="solid 1px red">
+					<Heading as='h2' size='xl' noOfLines={2}>
+						Collaborate and plan your campaigns
+					</Heading>
+
+					<Container m="2rem -1rem">
+						Schedule your posts in advance so you can focus on other things.
+					</Container>
+					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
+						<Button colorScheme='blue' variant='solid'>
+							Get started now
+						</Button>
+						<Button colorScheme='blue' variant='outline'>
+							Learn More
+						</Button>
+					</Stack>
+				</Box>
+
+			</Flex>
+
+
+			
 		</>
 	)
 }

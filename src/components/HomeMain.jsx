@@ -1,4 +1,6 @@
+
 import { Box, Container, Flex, Stack, VStack, Text, Heading, Image, Button } from '@chakra-ui/react'
+
 import React from 'react'
 
 const HomeMain = () => {
@@ -29,10 +31,8 @@ const HomeMain = () => {
 					<Image
 						border="1px green solid"
 						src="https://buffer.com/static/illustrations/all-channels-3.webp"
-
 					/>
 				</Box>
-
 			</Flex>
 
 			{/* Be where your customers are */}
@@ -42,17 +42,25 @@ const HomeMain = () => {
 						Be where your customers are
 					</Heading>
 
+
 					<Container mt="3rem" mb="3rem">
 						People spend, on average, almost 2.5 hours on social media every day.
 						Let them find your brand more easily through these four simple steps:
 					</Container>
 
+
+			
+	
 				</Box>
 				<Box maxW="100vw">
 					<Image src="https://buffer.com/static/misc/buffer-loop-v2.svg"
 						maxW="100%"
 						w="100%"
+
 						p="1rem 0"
+
+					
+
 						border="1px red solid"
 					/>
 				</Box>
@@ -61,6 +69,7 @@ const HomeMain = () => {
 
 			{/* Analyse part */}
 			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
+
 				<Box border="solid 1px red" >
 					<Heading fontSize={20} color="#2039f4">
 						1. ANALYSE
@@ -70,18 +79,22 @@ const HomeMain = () => {
 					</Heading>
 
 					<Container m="1rem -1rem">
+
+
 						See what’s working and deliver high engagement content.
 					</Container>
 					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
 						<Button colorScheme='teal' variant='solid'>
-							Button
+							Get started now
 						</Button>
 						<Button colorScheme='teal' variant='outline'>
-							Button
+							Learn More
 						</Button>
 					</Stack>
 				</Box>
+
 				<Box w="80%">
+
 					<Image
 						border="1px red solid"
 
@@ -91,6 +104,7 @@ const HomeMain = () => {
 				</Box>
 
 			</Flex>
+
 
 			{/* ....plan and publish.... */}
 			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column-reverse", "column-reverse", "row"]}>
@@ -140,12 +154,14 @@ const HomeMain = () => {
 						Skip to important comments with the help of labels and hotkeys.
 
 
+
 					</Container>
 					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
 						<Button colorScheme='blue' variant='solid'>
 							Get started now
 						</Button>
 						<Button colorScheme='blue' variant='outline'>
+
 							Learn more
 						</Button>
 					</Stack>
@@ -280,6 +296,7 @@ const HomeMain = () => {
 		</Button>
 
 	</Box>
+
 
 		</>
 	)

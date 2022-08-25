@@ -20,7 +20,7 @@ export const About = () => {
         <Text mt="3vh">To learn more about our approach to business and work, feel free to hop on over to our Open Blog.</Text>
       </Box>
       <Box textAlign={"center"} mt="10vh"><Button backgroundColor={"rgb(44,75,255)"}>Read the Open Blog</Button></Box>
-      <Box backgroundImage="url(`../Robin_img/White.png}`)" backgroundPosition="center"
+      <Box backgroundImage="url(`${White}`)" backgroundPosition="center"
   backgroundRepeat="no-repeat"/>
       <Box mt={"10vh"} textAlign={"center"}>
         <Heading>A few of the amazing brands who trust Buffer</Heading>

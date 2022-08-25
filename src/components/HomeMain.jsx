@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Stack, VStack, Heading, Image, Button } from '@chakra-ui/react'
+import { Box, Container, Flex, Stack, VStack, Heading, Image, Button, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const HomeMain = () => {
@@ -123,34 +123,7 @@ const HomeMain = () => {
 			</Flex>
 
 
-			{/* Engage */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
-				<Box border="solid 1px red">
-					<Heading as='h2' size='xl' noOfLines={2}>
-						Respond to comments twice as fast
-					</Heading>
-
-					<Container m="2rem -1rem">
-						Skip to important comments with the help of labels and hotkeys.
-
-
-					</Container>
-					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
-						<Button colorScheme='blue' variant='solid'>
-							Get started now
-						</Button>
-						<Button colorScheme='blue' variant='outline'>
-							Learn more
-						</Button>
-					</Stack>
-				</Box>
-				<Box>
-					<Image
-						border="1px green solid"
-						src="https://buffer.com/static/illustrations/hero-reply@2x-2.webp"
-					/>
-				</Box>
-			</Flex>
+			
 		</>
 	)
 }

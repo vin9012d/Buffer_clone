@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto"; 
 import { UserData } from "./Data";
 import { Box } from "@chakra-ui/react";
  
 
 
-function LineChart({ chartData }) {
+function Barchart({ chartData }) {
       
   const options = {
     maintainAspectRatio: false,
@@ -42,7 +42,7 @@ function LineChart({ chartData }) {
       });
       
     return   <Box >
-    <Line  height={200}   data={userData} options={options} /> </Box>;  
+    <Bar  height={200}   data={userData} options={options} /> </Box>;  
   }
   
-  export default LineChart;
+  export default Barchart;

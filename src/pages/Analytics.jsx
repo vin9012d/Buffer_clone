@@ -3,6 +3,8 @@ import React from 'react'
 import {BsFillQuestionCircleFill} from "react-icons/bs"
 import {BsArrowUpRight} from "react-icons/bs"
 import {AiOutlinePlusSquare} from "react-icons/ai"
+import LineChart from '../components/Test'
+import Barchart from '../components/Barchart'
 
 
 
@@ -82,15 +84,16 @@ export const Analytics = () => {
        </Box>
         <Box><Text>Average Perfomance</Text>
           <Flex>
-            <Flex w="32%"> 1 <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> </Flex>
-            <Flex w="32%"> 2 <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> </Flex>
-            <Flex w="32%">3  <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> </Flex>
+            <Flex w="32%"> 1 <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> <Barchart/>  </Flex>
+            <Flex w="32%"> 2 <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> <Barchart/>  </Flex>
+            <Flex w="32%">3  <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> <Barchart/>  </Flex>
         </Flex>
         
         </Box>
-       <Box> 
+       <Box > 
           <Box>Matrix perfomance</Box>
           {/* <Line data={data} /> */}
+          <LineChart/>
        </Box>
 
       </Box>

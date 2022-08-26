@@ -7,9 +7,9 @@ import { FaFacebookF, FaTiktok,FaGooglePlay,FaApple } from "react-icons/fa"
 
 export const Footer = () => (
   <>
-    <Flex p="5%" border="2px red solid">
+    <Flex p="5%" border="2px red solid" justify="space-between">
       <Flex direction="column" border="1px grey solid">
-        <Heading mb="3rem">
+        <Heading mb="3rem" fontSize={46}>
           Buffer
         </Heading>
         <Flex gap="1rem" fontSize={25} m="1rem 0">
@@ -44,7 +44,7 @@ export const Footer = () => (
         </Text>
       </Flex>
       <VStack border="1px red solid" align="flex-start">
-        <Heading>
+        <Heading fontSize={22}>
           Tools
         </Heading>
         <Text>
@@ -64,7 +64,7 @@ export const Footer = () => (
         </Text>
       </VStack>
       <VStack border="1px red solid" align="flex-start">
-        <Heading>
+        <Heading fontSize={22}>
           Resouces
         </Heading>
         <Text>
@@ -83,7 +83,7 @@ export const Footer = () => (
       </VStack>
 
       <VStack border="1px red solid" align="flex-start">
-        <Heading>
+        <Heading fontSize={22}>
           Support
         </Heading>
         <Text>
@@ -102,7 +102,7 @@ export const Footer = () => (
       </VStack>
 
       <VStack border="1px red solid" align="flex-start">
-        <Heading>
+        <Heading fontSize={22}>
           Company
         </Heading>
         <Text>

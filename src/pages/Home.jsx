@@ -10,7 +10,7 @@ export const Home = () => {
     console.log(data)
   return (
     <>
-    {/* <Navbar/> */}
+    <Navbar/>
     <HomeMain/>
     <Footer/>
     </>

@@ -2,6 +2,7 @@
 import { Box, Container, Flex, Stack, VStack, Text, Heading, Image, Button } from '@chakra-ui/react'
 
 import React from 'react'
+import Sliding from './Sliding_S'
 
 const HomeMain = () => {
 	return (
@@ -49,8 +50,8 @@ const HomeMain = () => {
 					</Container>
 
 
-			
-	
+
+
 				</Box>
 				<Box maxW="100vw">
 					<Image src="https://buffer.com/static/misc/buffer-loop-v2.svg"
@@ -59,7 +60,7 @@ const HomeMain = () => {
 
 						p="1rem 0"
 
-					
+
 
 						border="1px red solid"
 					/>
@@ -118,14 +119,14 @@ const HomeMain = () => {
 				</Box>
 				<Box border="solid 1px red" >
 					<Heading fontSize={20} color="#2039f4">
-					2. PLAN AND PUBLISH YOUR CONTENT
+						2. PLAN AND PUBLISH YOUR CONTENT
 					</Heading>
 					<Heading as='h2' size='xl' noOfLines={2} m="1rem 0">
-					Collaborate and plan your campaigns
+						Collaborate and plan your campaigns
 					</Heading>
 
 					<Container m="1rem -1rem">
-					Schedule your posts in advance so you can focus on other things.
+						Schedule your posts in advance so you can focus on other things.
 					</Container>
 					<Stack direction={["column", "column", "row"]} spacing={4} align='center'>
 						<Button colorScheme='teal' variant='solid'>
@@ -175,23 +176,7 @@ const HomeMain = () => {
 			</Flex>
 
 			{/* ...cards.... */}
-			<VStack border="1px green solid" w="400px" >
-				<Image
-					borderRadius='full'
-					boxSize='150px'
-					src="https://buffer.com/static/testimonials/luis-cancel-huckberry-mobile.jpg"
-					alt='Luis Cancel'
-				/>
-				<Container>
-					Buffer has made sharing our story and building our brand on social media so much easier.
-				</Container>
-				<Image
-					boxSize="150px"
-					src="https://miro.medium.com/max/1050/1*Szxnu0tuAF0Utt6xDnBq4w.jpeg" />
-				<Heading fontSize={20}>
-					Luis Cancel, Managing Editor
-				</Heading>
-			</VStack>
+			<Sliding />
 
 			{/* ...buffer achievements */}
 			<Flex justify="space-around" direction={["column", "column", "column", "row"]}>
@@ -258,44 +243,44 @@ const HomeMain = () => {
 			{/* ...marketing partners */}
 			<Box w="50%" m="auto" textAlign="center" border="1px solid red" gap="20px">
 				<Heading mb="2rem">
-				An official marketing partner of the industry leaders
+					An official marketing partner of the industry leaders
 				</Heading>
-				<Flex direction={["column","column","row"]} justify="center" align="center" gap="30px">
-					<Image 
-					w="100px"
-					h="70px"
-					src="https://buffer.com/static/ui/meta-business-partner@2x-2.png"
+				<Flex direction={["column", "column", "row"]} justify="center" align="center" gap="30px">
+					<Image
+						w="100px"
+						h="70px"
+						src="https://buffer.com/static/ui/meta-business-partner@2x-2.png"
 					/>
-					<Image 
-					w="100px"
-					h="70px"
-					src="https://buffer.com/static/ui/pinterest-marketing-partner@2x-2.png"
+					<Image
+						w="100px"
+						h="70px"
+						src="https://buffer.com/static/ui/pinterest-marketing-partner@2x-2.png"
 					/>
-					<Image 
-					w="100px"
-					h="70px"
-					src="https://buffer.com/static/ui/linkedin-marketing-partner@2x-2.png"
+					<Image
+						w="100px"
+						h="70px"
+						src="https://buffer.com/static/ui/linkedin-marketing-partner@2x-2.png"
 					/>
 				</Flex>
 			</Box>
-	
 
-	{/* 140,000+ people like you use buffer */}
 
-	<Box bg="#2039f4" textAlign="center" p="5% 20%" >
-		<Heading color="white" fontSize="30px" m="2rem 0">
-		140,000+ people like you use Buffer to build their brand on social media every month
-		</Heading>
-		<Button p="6%" bg="rgb(233, 114, 132)" color="white"
-		 _hover={{
-			bg:"rgb(178, 19, 43)",
-			
-		  }}
-		>
-			Get started now
-		</Button>
+			{/* 140,000+ people like you use buffer */}
 
-	</Box>
+			<Box bg="#2039f4" textAlign="center" p="5% 20%" >
+				<Heading color="white" fontSize="30px" m="2rem 0">
+					140,000+ people like you use Buffer to build their brand on social media every month
+				</Heading>
+				<Button p="6%" bg="rgb(233, 114, 132)" color="white"
+					_hover={{
+						bg: "rgb(178, 19, 43)",
+
+					}}
+				>
+					Get started now
+				</Button>
+
+			</Box>
 
 
 		</>

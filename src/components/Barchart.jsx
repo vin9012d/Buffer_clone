@@ -6,8 +6,8 @@ import { Box } from "@chakra-ui/react";
  
 
 
-function Barchart({ chartData }) {
-      
+function Barchart({ data }) {
+      console.log(data,"bar")
   const options = {
     maintainAspectRatio: false,
     responsive: true,
@@ -15,34 +15,16 @@ function Barchart({ chartData }) {
       
       title: {
         display: true,
-        text: 'Chart.js Line Chart',
+       
         
       },
     },
   };
 
-      const [userData, setUserData] = useState({
-        labels: UserData.map((data) => data.year),
-        datasets: [
-          {
-            label: "Users Gained",
-            data: UserData.map((data) => data.userGain),
-            backgroundColor: [
-              "rgba(75,192,192,1)",
-              "#ecf0f1",
-              "#50AF95",
-              "#f3ba2f",
-              "#2a71d0",
-            ],
-            borderColor: "black",
-                borderWidth: 2,
-            fill:true
-          },
-        ],
-      });
+      
       
     return   <Box >
-    <Bar  height={200}   data={userData} options={options} /> </Box>;  
+    <Bar  height={200}  data={data} options={options} /> </Box>;  
   }
   
   export default Barchart;

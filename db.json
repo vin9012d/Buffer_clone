@@ -1,26 +1,17 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
 
   "channels":[
     {
       "id":1,
-      "page":"Growmart_navsari",
+      "page":"Facebook",
+      "ids":"Animal_hd_world@565",
+      "logo":"https://media.istockphoto.com/photos/smart-home-symbol-picture-id1314037715?b=1&k=20&m=1314037715&s=170667a&w=0&h=vFoSrBkotNvWgwfQz013ZuLzGw0aWJfLeMkCPTuAxQY="
+
+    },
+    {
+      "id":2,
+      "page":"Instagram",
+      "ids":"Nature_hd_world@565",
       "logo":"https://media.istockphoto.com/photos/smart-home-symbol-picture-id1314037715?b=1&k=20&m=1314037715&s=170667a&w=0&h=vFoSrBkotNvWgwfQz013ZuLzGw0aWJfLeMkCPTuAxQY="
 
     }

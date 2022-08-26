@@ -49,7 +49,7 @@ export const Engagement = () => {
                         <Heading fontSize={"22px"} color="white">{el.id[0].toUpperCase()}</Heading>
                       </Box>
                     </Box>
-                    <Box  width={"100%"} height="100%" textAlign={"left"} >
+                    <Box  width={"100%"} height="100%" textAlign={"left"} overflow="hidden" >
                       <Box display={"flex"}><Text fontWeight={"bold"}>&nbsp;&nbsp;&nbsp;{el.id}&nbsp;&nbsp;&nbsp;&nbsp;</ Text><Text>{el.comment}</Text></Box>
                       <Text fontSize={"12px"}>&nbsp;&nbsp;&nbsp;{el.days}</Text>
                       {el.rep?<Text fontSize={"10px"} fontWeight={"bold"} mt="2%">&nbsp;&nbsp;&nbsp;---View Reply</Text>:""}

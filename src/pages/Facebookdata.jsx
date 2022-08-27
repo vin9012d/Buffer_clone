@@ -11,9 +11,10 @@ import { getFacebookData } from '../redux/Appreducer/action'
 
 
 export const Facebookdata = () => {
-  const labels = ['Aug2','4','6','8','10','12','14','16','18','20','22'];
-  const selectora = useSelector(store => store.Appreducer.data)
-    const [selector,setSelector]=useState(selectora)
+  const labels = ['Aug2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22'];
+  
+  const selector = useSelector(store => store.Appreducer.data)
+    // const [selector,setSelector]=useState(selectora || [])
  const data = {
     labels,
     datasets: [
@@ -103,18 +104,24 @@ export const Facebookdata = () => {
           },
         ],
       });
-      console.log(selector,"selector")
+  console.log(selector, "selector")
+  
       useEffect(() => {
-        if (selectora.length==0) {
-            dispatch(getFacebookData()) 
-            
-        } else {
-            setSelector(selectora)
-        }
+        
+
+        if (selector.length == 0) {
+          
        
-      }, [selectora])
+          dispatch(getFacebookData()) 
+         
+          }
+       
+       
+      }, [selector])
     
-    console.log(userData,'userdata')
+  // console.log(selectora, 'selectora')
+  console.log(selector, 'selector')
+  
    
   return (
     <Box border="1px solid black" p="20px" maxH="80vh" overflow="scroll">

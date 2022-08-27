@@ -11,13 +11,7 @@ import { Mainroute } from "./pages/Mainroute";
 function App() {
   return (
     <div className="App">
-      {/* <Addcannel/> */}
-      <Channels />
-      {/* <LineChart /> */}
-      {/* <Analytics />
-      <Mainroute /> */}
-      <Facebookanalytics />
-      {/* <Facebookdata /> */}
+     <Mainroute />
     </div>
   );
 }

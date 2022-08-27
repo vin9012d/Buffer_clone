@@ -11,7 +11,7 @@ import {
     MenuDivider,
   } from '@chakra-ui/react'
   import {BiDotsVerticalRounded } from "react-icons/bi"
-export const Channeldelete = () => {
+export const Channeldelete = ({id}) => {
     const handleDelete = (id) => {
   
     }

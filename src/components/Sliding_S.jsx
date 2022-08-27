@@ -54,7 +54,7 @@ export default function Sliding() {
 
 	return (
 
-<Box p="10% 0" border="2px yellow solid" >
+<Box p="10% 0" >
 
 
 

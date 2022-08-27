@@ -8,8 +8,8 @@ const HomeMain = () => {
 	return (
 		<>
 			{/* #1 video button & content */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
-				<Box border="solid 1px red">
+			<Flex align="center" p="5% 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
+				<Box >
 					<Heading as='h2' size='xl' noOfLines={2}>
 						Grow your audience on social and beyond
 					</Heading>

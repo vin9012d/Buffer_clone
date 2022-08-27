@@ -16,7 +16,7 @@ import "./Analyticssidebar.css"
 const Analyticssidebar = () => {
   return (
       <Box>
-          <Stack className='hoverprop' w="250px" pl="20px" pr="20px"  h="80vh"  textAlign="left" bg="red.200"  >
+          <Stack className='hoverprop' w="300px" pl="20px" pr="20px"  h="80vh"  textAlign="left" bg="red.200"  >
               <Flex  alignItems="center" gap={2} mt="5%"   _hover={{
     background: "white",
     color: "teal.500",

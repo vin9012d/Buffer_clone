@@ -6,7 +6,7 @@ import { Box } from "@chakra-ui/react";
  
 
 
-function LineChart({ chartData }) {
+function LineChart({ data }) {
       
   const options = {
     maintainAspectRatio: false,
@@ -14,8 +14,8 @@ function LineChart({ chartData }) {
     plugins: {
       
       title: {
-        display: true,
-        text: 'Chart.js Line Chart',
+        display: true
+        
         
       },
     },
@@ -42,7 +42,7 @@ function LineChart({ chartData }) {
       });
       
     return   <Box >
-    <Line  height={200}   data={userData} options={options} /> </Box>;  
+    <Line  height={200}   data={data} options={options} /> </Box>;  
   }
   
   export default LineChart;

@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { FaUserFriends } from "react-icons/fa";
 import { BsCaretDownFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
+import InnerpageModal from "./InnerpageModal";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const AltNavbar = () => {
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <Flex
-        border="1px solid black"
+        border="0.1px solid grey"
         alignItems="center"
         justifyContent="space-between"
+        width={"100%"}
+        borderRight="none"
+        borderTop={"none"}
+        boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
       >
         <Flex alignItems="center">
           <NavLink to="#">
@@ -146,7 +153,11 @@ const AltNavbar = () => {
               />
             </Flex>
           </NavLink>
+          <HamburgerIcon fontSize={30} display={["block", "block", "block", "none", "none"]} onClick={() => { setShowModal(true) }} />
         </Flex>
+        {
+          showModal ? <InnerpageModal /> : ""
+        }
       </Flex>
     </>
   );

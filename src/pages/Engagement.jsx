@@ -97,7 +97,7 @@ export const Engagement = () => {
     <Box display={{base: 'block', // 0-48em
     md: 'flex', // 48em-80em,
     xl: 'flex'}}>
-      <Box height={{base: '60vh',md: '90vh', xl: '90vh'}} width={{base: '100%',md: '40%', xl: '36%'}} border={"0.1px solid grey"} cursor="pointer">
+      <Box height={{base: '60vh',md: '90vh', xl: '90vh'}} width={{base: '100%',md: '40%', xl: '36%'}} border={"0.1px solid grey"} borderTop="none" cursor="pointer">
         <Box height={"10%"} borderBottom={"0.1px solid grey"} display="flex" justifyContent={"center"} alignItems="center">
           <Box zIndex={"222"} width="50%" margin={"auto"} >
             <Popover width={"100%"}>

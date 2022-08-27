@@ -8,23 +8,24 @@ import { Box } from "@chakra-ui/react";
 
 function Barchart({ data }) {
       console.log(data,"bar")
-  const options = {
-    maintainAspectRatio: false,
-    responsive: true,
-    plugins: {
-      
-      title: {
-        display: true,
-       
-        
-      },
-    },
-  };
+      const options = {
+        maintainAspectRatio: false,
+        responsive: true,
+        plugins: {
+          
+          title: {
+            display: true
+            
+            
+          },
+        },
+      };
 
       
       
-    return   <Box >
-    <Bar  height={200}  data={data} options={options} /> </Box>;  
+  return <Box >
+  <Bar  height={200}  data={data} options={options} /> 
+     </Box>;  
   }
   
   export default Barchart;

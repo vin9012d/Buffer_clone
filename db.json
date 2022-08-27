@@ -1,5 +1,4 @@
 {
-
   "channels":[
     {
       "id":1,
@@ -16,207 +15,201 @@
 
     }
   ],
-
-"totalData":[
-  {
-    "id":1,
-    "followers":"4000",
-    "impression":"3"
-  },
-  {
-    "id":2,
-    "followers":"4100",
-    "impression":"4"
-  },
-  {
-    "id":3,
-    "followers":"4400",
-    "impression":"2"
-  },
-  {
-    "id":4,
-    "followers":"5000",
-    "impression":"5"
-  },
-  {
-    "id":5,
-    "followers":"5010",
-    "impression":"4"
-  },
-  {
-    "id":6,
-    "followers":"4212",
-    "impression":"8"
-  },
-  {
-    "id":7,
-    "followers":"5055",
-    "impression":"10"
-  },
-  {
-    "id":8,
-    "followers":"5088",
-    "impression":"20"
-  },
-  {
-    "id":9,
-    "followers":"5099",
-    "impression":"23"
-  },
-  {
-    "id":10,
-    "followers":"5143",
-    "impression":"19"
-  }
-],
-
-"facebookData":[
-  {
-    "id":1,
-    "followers":"4000",
-    "impression":"3",
-    "post":"2",
-    "comment":"12"
-  },
-  {
-    "id":2,
-    "followers":"4100",
-    "impression":"4",
-    "post":"0",
-    "comment":"1"
-  },
-  {
-    "id":3,
-    "followers":"4400",
-    "impression":"2",
-    "post":"0",
-    "comment":"0"
-  },
-  {
-    "id":4,
-    "followers":"5000",
-    "impression":"5",
-    "post":"1",
-    "comment":"2"
-  },
-  {
-    "id":5,
-    "followers":"5010",
-    "impression":"4",
-    "post":"2",
-    "comment":"3"
-  },
-  {
-    "id":6,
-    "followers":"4212",
-    "impression":"8",
-    "post":"0",
-    "comment":"5"
-  },
-  {
-    "id":7,
-    "followers":"5055",
-    "impression":"10",
-    "post":"6",
-    "comment":"8"
-  },
-  {
-    "id":8,
-    "followers":"5088",
-    "impression":"20",
-    "post":"2",
-    "comment":"8"
-  },
-  {
-    "id":9,
-    "followers":"5099",
-    "impression":"23",
-    "post":"3",
-    "comment":"5"
-  },
-  {
-    "id":10,
-    "followers":"5143",
-    "impression":"19",
-    "post":"4",
-    "comment":"7"
-  }
-],
-
-
-"instagramData":[
-  {
-    "id":1,
-    "followers":"4000",
-    "impression":"3",
-    "post":"2",
-    "comment":"12"
-  },
-  {
-    "id":2,
-    "followers":"4100",
-    "impression":"4",
-    "post":"0",
-    "comment":"1"
-  },
-  {
-    "id":3,
-    "followers":"4400",
-    "impression":"2",
-    "post":"0",
-    "comment":"0"
-  },
-  {
-    "id":4,
-    "followers":"5000",
-    "impression":"5",
-    "post":"1",
-    "comment":"2"
-  },
-  {
-    "id":5,
-    "followers":"5010",
-    "impression":"4",
-    "post":"2",
-    "comment":"3"
-  },
-  {
-    "id":6,
-    "followers":"4212",
-    "impression":"8",
-    "post":"0",
-    "comment":"5"
-  },
-  {
-    "id":7,
-    "followers":"5055",
-    "impression":"10",
-    "post":"6",
-    "comment":"8"
-  },
-  {
-    "id":8,
-    "followers":"5088",
-    "impression":"20",
-    "post":"2",
-    "comment":"8"
-  },
-  {
-    "id":9,
-    "followers":"5099",
-    "impression":"23",
-    "post":"3",
-    "comment":"5"
-  },
-  {
-    "id":10,
-    "followers":"5143",
-    "impression":"19",
-    "post":"4",
-    "comment":"7"
-  }
-]
-
-
-
+  
+  "totalData": [
+    {
+      "id": 1,
+      "followers": "4000",
+      "impression": "3"
+    },
+    {
+      "id": 2,
+      "followers": "4100",
+      "impression": "4"
+    },
+    {
+      "id": 3,
+      "followers": "4400",
+      "impression": "2"
+    },
+    {
+      "id": 4,
+      "followers": "5000",
+      "impression": "5"
+    },
+    {
+      "id": 5,
+      "followers": "5010",
+      "impression": "4"
+    },
+    {
+      "id": 6,
+      "followers": "4212",
+      "impression": "8"
+    },
+    {
+      "id": 7,
+      "followers": "5055",
+      "impression": "10"
+    },
+    {
+      "id": 8,
+      "followers": "5088",
+      "impression": "20"
+    },
+    {
+      "id": 9,
+      "followers": "5099",
+      "impression": "23"
+    },
+    {
+      "id": 10,
+      "followers": "5143",
+      "impression": "19"
+    }
+  ],
+  "facebookData": [
+    {
+      "id": 1,
+      "followers": "4000",
+      "impression": "3",
+      "post": "2",
+      "comment": "12"
+    },
+    {
+      "id": 2,
+      "followers": "4100",
+      "impression": "4",
+      "post": "0",
+      "comment": "1"
+    },
+    {
+      "id": 3,
+      "followers": "4400",
+      "impression": "2",
+      "post": "0",
+      "comment": "0"
+    },
+    {
+      "id": 4,
+      "followers": "5000",
+      "impression": "5",
+      "post": "1",
+      "comment": "2"
+    },
+    {
+      "id": 5,
+      "followers": "5010",
+      "impression": "4",
+      "post": "2",
+      "comment": "3"
+    },
+    {
+      "id": 6,
+      "followers": "4212",
+      "impression": "8",
+      "post": "0",
+      "comment": "5"
+    },
+    {
+      "id": 7,
+      "followers": "5055",
+      "impression": "10",
+      "post": "6",
+      "comment": "8"
+    },
+    {
+      "id": 8,
+      "followers": "5088",
+      "impression": "20",
+      "post": "2",
+      "comment": "8"
+    },
+    {
+      "id": 9,
+      "followers": "5099",
+      "impression": "23",
+      "post": "3",
+      "comment": "5"
+    },
+    {
+      "id": 10,
+      "followers": "5143",
+      "impression": "19",
+      "post": "4",
+      "comment": "7"
+    }
+  ],
+  "instagramData": [
+    {
+      "id": 1,
+      "followers": "4000",
+      "impression": "3",
+      "post": "2",
+      "comment": "12"
+    },
+    {
+      "id": 2,
+      "followers": "4100",
+      "impression": "4",
+      "post": "0",
+      "comment": "1"
+    },
+    {
+      "id": 3,
+      "followers": "4400",
+      "impression": "2",
+      "post": "0",
+      "comment": "0"
+    },
+    {
+      "id": 4,
+      "followers": "3800",
+      "impression": "5",
+      "post": "1",
+      "comment": "2"
+    },
+    {
+      "id": 5,
+      "followers": "5010",
+      "impression": "4",
+      "post": "2",
+      "comment": "3"
+    },
+    {
+      "id": 6,
+      "followers": "4212",
+      "impression": "8",
+      "post": "0",
+      "comment": "5"
+    },
+    {
+      "id": 7,
+      "followers": "5055",
+      "impression": "10",
+      "post": "6",
+      "comment": "8"
+    },
+    {
+      "id": 8,
+      "followers": "3000",
+      "impression": "20",
+      "post": "2",
+      "comment": "8"
+    },
+    {
+      "id": 9,
+      "followers": "5099",
+      "impression": "23",
+      "post": "3",
+      "comment": "5"
+    },
+    {
+      "id": 10,
+      "followers": "5143",
+      "impression": "19",
+      "post": "4",
+      "comment": "7"
+    }
+  ]
 }

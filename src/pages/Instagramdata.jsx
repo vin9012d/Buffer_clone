@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Icon, Input, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Icon, Input, SimpleGrid, Text, Tooltip } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import {BsFillQuestionCircleFill} from "react-icons/bs"
 import {BsArrowUpRight} from "react-icons/bs"
@@ -6,12 +6,12 @@ import {AiOutlinePlusSquare} from "react-icons/ai"
 import LineChart from '../components/Test'
 import Barchart from '../components/Barchart'
 import { useDispatch, useSelector } from 'react-redux'
-import { getFacebookData } from '../redux/Appreducer/action'
+import { getFacebookData, getInstagramData } from '../redux/Appreducer/action'
 import { RiVipDiamondFill } from 'react-icons/ri'
 
 
 
-export const Facebookdata = () => {
+export const Instagramdata = () => {
   const labels = ['Aug2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22'];
   
   const selectora = useSelector(store => store.Appreducer.data)
@@ -169,7 +169,7 @@ export const Facebookdata = () => {
         if (selectora.length == 0) {
           
        
-          dispatch(getFacebookData()) 
+          dispatch(getInstagramData()) 
          
           }
        
@@ -193,7 +193,7 @@ export const Facebookdata = () => {
   
    
   return (
-    <Box border="1px solid black" p="20px" maxH="80vh" overflow="scroll">
+    <Box border="1px solid black" p="20px" maxH="80vh" overflow="scroll" w="100%">
       <Flex>
         <Flex flexGrow={1} >
           <Input w="80%" />
@@ -220,7 +220,7 @@ export const Facebookdata = () => {
           </Flex>
 
 
-          <Grid templateColumns='repeat(3, 1fr)' gap={6} textAlign="left">
+          <SimpleGrid columns={[2, 2, 3]} spacing={["10px","10px","40px"]}  textAlign="left">
             <Box  mb="40px">
               <Text>Post</Text>
               <Flex alignItems="center" > 2     <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text>   </Flex>
@@ -247,22 +247,27 @@ export const Facebookdata = () => {
   </Box>
             
 
-</Grid>
+</SimpleGrid>
 
        </Box>
         <Box shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" mt="40px" mb="40px" p="20px"><Text fontSize='xl' as="b" mb="50px">Average Perfomance</Text>
-          <Flex textAlign="center" mt="20px" >
-                      <Flex w="33%"> 1 <Icon color='green.500' as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text> 
+          <Flex  mt="20px" justifyContent="space-between"   flexDirection={["column","column","column","row","row"]}>
+                      <Flex w={["100%", "100%","100%","30%","30%"]} flexDirection="column">
+                          
+                      <Flex> <Text>1</Text> <Icon color='green.500' as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text></Flex>
                       
              { postData.labels?.length>0 && <Barchart data={postData} />}
             
             </Flex>
-            <Flex w="33%"> 2 <Icon   color='green.500'  as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text>
+            <Flex w={["100%", "100%","100%","30%","30%"]} flexDirection="column"> 
+            
+            <Flex> <Text>2</Text> <Icon color='green.500' as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text></Flex>
             
             { impressionData.labels?.length>0 && <Barchart data={impressionData} />} 
             
             </Flex>
-            <Flex w="33%">3  <Icon color='green.500' as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text>
+                      <Flex w={["100%", "100%","100%","30%","30%"]} flexDirection="column">
+                      <Flex> <Text>3</Text> <Icon color='green.500' as={BsArrowUpRight} />    <Text color='green.500'> 200 %</Text></Flex>
               
             { commentsData.labels?.length>0 && <Barchart data={commentsData} />}
 

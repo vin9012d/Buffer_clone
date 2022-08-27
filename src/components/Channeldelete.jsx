@@ -11,9 +11,21 @@ import {
     MenuDivider,
   } from '@chakra-ui/react'
   import {BiDotsVerticalRounded } from "react-icons/bi"
-export const Channeldelete = ({id}) => {
-    const handleDelete = (id) => {
+import { useDispatch } from 'react-redux'
+import { deleteChannels, getChannels } from '../redux/Appreducer/action'
+export const Channeldelete = ({ id }) => {
   
+  const dispatch=useDispatch()
+  const handleDelete = (id) => {
+      
+    dispatch(deleteChannels(id)).then((res) => {
+      console.log(res, 'response')
+      if (res.type == "DELETE_CHANNELS_SUCCESS") {
+        dispatch(getChannels()).then(() => {
+          
+        })
+      }
+    })
     }
 
   return (

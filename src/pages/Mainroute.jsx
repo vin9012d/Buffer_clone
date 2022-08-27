@@ -6,7 +6,9 @@ import { Analytics } from './Analytics'
 import { Channels } from './Channels'
 import { Customer } from './Customer'
 import { Engagement } from './Engagement'
+import Facebookanalytics from './Facebookanalytics'
 import { Home } from './Home'
+import Instagramanalytics from './Instagramanalytics'
 import { Login } from './Login'
 import { Pricing } from './Pricing'
 import { Publishing } from './Publishing'
@@ -23,7 +25,11 @@ export const Mainroute = () => {
           <Route path="/channels/addchannel" element={<Addcannel />} />
           <Route path="/engagement" element={<Engagement />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/publishing" element={<Publishing />} />
+      <Route path="/publishing" element={<Publishing />} />
+      <Route path="/facebookanalytics" element={<Facebookanalytics />} />
+      <Route path="/instagramanalytics" element={<Instagramanalytics />} />
+      
+      
           
     </Routes>
   )

@@ -63,7 +63,7 @@ export function ChannelModal() {
                             </Select>
                             
                             <Input type="text" placeholder='enter your account id'
-                            name="id" value={data.id}     onChange={handleData} mt="15px" />
+                            name="id"      onChange={handleData} mt="15px" />
         
             </ModalBody>
   

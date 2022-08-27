@@ -1,4 +1,4 @@
-import { GET_CHANNELS_FAILURE, GET_CHANNELS_REQUEST, GET_CHANNELS_SUCCESS, GET_FACEBOOKDATA_FAILURE, GET_FACEBOOKDATA_REQUEST, GET_FACEBOOKDATA_SUCCESS } from "./actiontype";
+import { GET_CHANNELS_FAILURE, GET_CHANNELS_REQUEST, GET_CHANNELS_SUCCESS, GET_FACEBOOKDATA_FAILURE, GET_FACEBOOKDATA_REQUEST, GET_FACEBOOKDATA_SUCCESS, GET_INSTAGRAMDATA_FAILURE, GET_INSTAGRAMDATA_REQUEST, GET_INSTAGRAMDATA_SUCCESS } from "./actiontype";
 
 const initstate = {
     isLoading: false,
@@ -28,6 +28,14 @@ export const reducer = (state = initstate, action) => {
         
         case GET_FACEBOOKDATA_FAILURE:
             return { ...state, isLoading: false, isError: true }
+        case GET_INSTAGRAMDATA_REQUEST:
+            return {...state,isLoading:true,isError:false}
+
+        case GET_INSTAGRAMDATA_SUCCESS:
+            return { ...state, isLoading: false, isError: false, data: payload }
+        
+        case GET_INSTAGRAMDATA_FAILURE:
+            return {...state,isLoading:false,isError:true}
         
         default:
             return state;

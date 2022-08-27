@@ -1,4 +1,4 @@
-import { ADD_CHANNELS_FAILURE, ADD_CHANNELS_REQUEST, ADD_CHANNELS_SUCCESS, DELETE_CHANNELS_FAILURE, DELETE_CHANNELS_REQUEST, DELETE_CHANNELS_SUCCESS, GET_CHANNELS_FAILURE, GET_CHANNELS_REQUEST, GET_CHANNELS_SUCCESS, GET_FACEBOOKDATA_FAILURE, GET_FACEBOOKDATA_REQUEST, GET_FACEBOOKDATA_SUCCESS, GET_INSTAGRAMDATA_REQUEST } from "./actiontype"
+import { ADD_CHANNELS_FAILURE, ADD_CHANNELS_REQUEST, ADD_CHANNELS_SUCCESS, DELETE_CHANNELS_FAILURE, DELETE_CHANNELS_REQUEST, DELETE_CHANNELS_SUCCESS, GET_CHANNELS_FAILURE, GET_CHANNELS_REQUEST, GET_CHANNELS_SUCCESS, GET_FACEBOOKDATA_FAILURE, GET_FACEBOOKDATA_REQUEST, GET_FACEBOOKDATA_SUCCESS, GET_INSTAGRAMDATA_FAILURE, GET_INSTAGRAMDATA_REQUEST, GET_INSTAGRAMDATA_SUCCESS } from "./actiontype"
 
 import axios from 'axios'
 
@@ -30,12 +30,12 @@ const addChannels = (payload) => (dispatch)=>{
 
 const deleteChannels = (id) => (dispatch) => {
     dispatch({ type: DELETE_CHANNELS_REQUEST })
-    axios.delete(`http://localhost:8080/channels/${id}`)
+   return  axios.delete(`http://localhost:8080/channels/${id}`)
         .then((res) => {
      return    dispatch({type:DELETE_CHANNELS_SUCCESS})
         })
         .catch((e) => {
-        dispatch({type:DELETE_CHANNELS_FAILURE})
+      return   dispatch({type:DELETE_CHANNELS_FAILURE})
     })
     }
 
@@ -57,15 +57,15 @@ const getInstagramData = () => (dispatch) => {
     dispatch({ type: GET_INSTAGRAMDATA_REQUEST })
     
 
-    return axios.get(" http://localhost:8080/facebookData")
+    return axios.get(" http://localhost:8080/instagramData")
         .then((res) => {
-        dispatch({type:GET_CHANNELS_SUCCESS,payload:res.data})
+        dispatch({type:GET_INSTAGRAMDATA_SUCCESS,payload:res.data})
         }).catch((e) => {
-        dispatch({type:GET_FACEBOOKDATA_FAILURE})
+        dispatch({type:GET_INSTAGRAMDATA_FAILURE})
     })
 
     }
 
-    export {getChannels,addChannels,getFacebookData,getInstagramData}
+    export {getChannels,addChannels,deleteChannels, getFacebookData,getInstagramData}
 
 

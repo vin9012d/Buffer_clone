@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Icon, Input, SimpleGrid, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Icon, Img, Input, Select, SimpleGrid, Text, Tooltip } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import {BsFillQuestionCircleFill} from "react-icons/bs"
 import {BsArrowUpRight} from "react-icons/bs"
@@ -6,8 +6,9 @@ import {AiOutlinePlusSquare} from "react-icons/ai"
 import LineChart from '../components/Test'
 import Barchart from '../components/Barchart'
 import { useDispatch, useSelector } from 'react-redux'
-import { getFacebookData, getInstagramData } from '../redux/Appreducer/action'
+import { getChannels, getFacebookData, getInstagramData } from '../redux/Appreducer/action'
 import { RiVipDiamondFill } from 'react-icons/ri'
+import { Channels } from './Channels'
 
 
 
@@ -15,6 +16,7 @@ export const Instagramdata = () => {
   const labels = ['Aug2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22'];
   
   const selectora = useSelector(store => store.Appreducer.data)
+  const channels = useSelector(store => store.Appreducer.ids)
     const [selector,setSelector]=useState(selectora)
 //  const data = {
 //     labels,
@@ -169,16 +171,22 @@ export const Instagramdata = () => {
         if (selectora.length == 0) {
           
        
-          dispatch(getInstagramData()) 
+            dispatch(getInstagramData()) 
+            
          
+          }
+
+          if (channels.length == 0) {
+              dispatch(getChannels())
           }
        
        
-      }, [selectora,selector])
+      }, [selectora,selector,channels])
 
   useEffect(() => {
     if (selector.length == 0) {
-      setSelector(selectora)
+        setSelector(selectora)
+        
     }
   },[selector,selectora])
 
@@ -188,35 +196,80 @@ export const Instagramdata = () => {
     }
   },[selector,selectora])
     
-  console.log(selectora, 'selectora')
-  console.log(selector, 'selector')
+//   console.log(selectora, 'selectora')
+//   console.log(selector, 'selector')
+    console.log(channels)
   
    
   return (
     <Box border="1px solid black" p="20px" maxH="80vh" overflow="scroll" w="100%">
-      <Flex>
-        <Flex flexGrow={1} >
-          <Input w="80%" />
+      <Flex shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" p="10px 10px 10px 10px">
+        <Flex flexGrow={1}  >
+                  {/* <Input w="80%" /> */}
+                  <Select defaultChecked={1}  w="80%">
+ 
+                      {channels.length > 0 && channels.map((item) => (
+                          <option value={item.id}>
+                            <Flex gap="10px" alignItems="center">
+                        
+                             <Box>
+                  <Text>{ item.page}</Text>
+                  <Text>{item.ids }</Text>
+                </Box>
+              </Flex>
+                          </option>
+                      ))}
+</Select>
         </Flex>
-        <Flex flexGrow={1}  justifyContent="end">
-          <Input placeholder='date' w="35%" />
+        <Flex flexGrow={1}  justifyContent="end"  >
+          <Input type="date" w="35%" />
           <Input placeholder='export' w="20%"  />
         </Flex>
 
       </Flex>
 
       <Box>
-        <Flex gap="30px">
-          <Box>Overview</Box>
-          <Box>Post</Box>
-          <Box>Stories</Box>
-          <Box>Audience</Box>
-          <Box>Answers</Box>
+        <Flex gap="30px" shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" p="10px 10px 10px 10px" mt="30px">
+          <Box p="5px" _hover={{
+                            background:
+                                "#2c4bff",
+                      color: "white",
+                           
+
+                        }}>Overview</Box>
+          <Box  p="5px" _hover={{
+                            background:
+                                "#2c4bff",
+                      color: "white",
+                           
+
+                        }}>Post</Box>
+          <Box p="5px" _hover={{
+                            background:
+                                "#2c4bff",
+                      color: "white",
+                           
+
+                        }}>Stories</Box>
+          <Box p="5px" _hover={{
+                            background:
+                                "#2c4bff",
+                      color: "white",
+                           
+
+                        }}>Audience</Box>
+          <Box p="5px" _hover={{
+                            background:
+                                "#2c4bff",
+                      color: "white",
+                           
+
+                        }}>Answers</Box>
         </Flex>
         <Box shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" mt="40px" mb="40px" p="20px" textAlign="center">
-          <Flex  justifyContent="space-between" position="relative">
+          <Flex  justifyContent={["start","start","space-between"]} flexDirection={["column","column","row"]} pb="20px">
             <Box mb="20px"> <Text fontSize="xl" as="b" >Perfomance</Text></Box>
-            <Box>   <Flex alignItems="center" gap="10px">       How is this calculated?      <Icon h={35} w={35} ml="40px"  as={AiOutlinePlusSquare} /> </Flex>    </Box>
+            <Box>   <Flex alignItems="center" gap={["5px","5px","10px"]}>       How is this calculated?      <Icon h={35} w={35} ml="40px"  as={AiOutlinePlusSquare} /> </Flex>    </Box>
           </Flex>
 
 

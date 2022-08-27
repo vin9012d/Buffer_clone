@@ -75,11 +75,11 @@ export const Channels = () => {
               </Flex>
     </Box>
       <Box m="auto" w="100%"  h="85vh" border="1px solid green" bg="#f5f5f5"  >
-        <Flex m="auto" w="50%" h="100%" justifyContent="center" >
+        <Flex m="auto" w={["90%","90%","60%","50%"]} h="100%" justifyContent="center" >
           <Box border="1px solid black" w="100%"   >
-            <Flex  w="100%" justifyContent="space-between" alignItems="center" p="10px" >
+            <Flex  w="100%" justifyContent="space-between" flexDirection={["column","column","row"]} alignItems="center" p="10px" >
                 <Text fontSize="4xl" as="b"> Channels</Text>
-                <Link to={'/channels/addchannel'}>
+                <Link to={'/channel'}>
               <Button bg="#2c4bff" color="white">Connect channel</Button> </Link>
             </Flex>
             <Box border="1px solid red" pl="35px" pr="35px" pt="15px" pb="15px" shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' bg="white">

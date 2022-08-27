@@ -1,4 +1,4 @@
-import { Box, Flex, Text,Icon,Button, Grid, GridItem, Image, Img, Divider } from '@chakra-ui/react'
+import { Box, Flex, Text,Icon,Button, Grid, GridItem, Image, Img, Divider, SimpleGrid } from '@chakra-ui/react'
 import React, { useRef } from 'react'
 import { MdAccountCircle } from "react-icons/md"
 import insta from "../Vinod_images/insta.png"
@@ -114,21 +114,21 @@ const hoverref=useRef()
                
               </Flex>
     </Box>
-    <Flex m="auto" w="50%" h="100%" justifyContent="center" >
+    <Flex m="auto" w={["90%","90%","50%"]} h="100%" justifyContent="center" >
       <Box border="1px solid black" w="100%"  >
-          <Text fontSize='4xl' as="b">Connect a new channel</Text>
-          <Text mb="25px">Looking for step-by-step instructions? Visit our Help Center to read our Getting Started guides and learn about supported channel types.</Text>
-          <Grid templateColumns='repeat(3, 1fr)' gap={6} justifyContent="center">
+          <Text fontSize={["xl","xl","4xl"]} textAlign={["center","center","left"]} as="b">Connect a new channel</Text>
+          <Text mb="25px" textAlign={["center","center","left"]}>Looking for step-by-step instructions? Visit our Help Center to read our Getting Started guides and learn about supported channel types.</Text>
+          <SimpleGrid columns={[2, 2, 3]} gap={6} justifyContent="center">
             {channelData.map((item,ind) => (
                      <Flex   _hover={{  border:"1px solid blue" }} ref={hoverref} h="25vh" overflow="hidden"  flexDirection="column" alignItems="center" key={item.id} shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' textAlign="center" p="20px">
-                <Img w="50px" h="50px" src={item.image} />
+                <Img w={["30px","30px","50px"]}  h={["30px","30px","50px"]}  src={item.image} />
                 <Text mt="5x">{item.name}</Text>
                
                 <ChannelModal  />
                    </Flex>
                   ))}
            
-          </Grid>
+          </SimpleGrid>
           <Box>
            <Link to={'/channels'}><Flex cursor="pointer" alignItems="center" gap={3} mt="10px">  <Icon h={19} w={19}   as={BiLeftArrowAlt} />
                   <Text as="b">Back to channels</Text></Flex> </Link> 

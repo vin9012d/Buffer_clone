@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import {ImCross} from "react-icons/im";
 import {BiChevronRight} from "react-icons/bi"
 
-const CustomModal = () => {
-	const [show,setShow]=useState("block")
+const CustomModal = ({show,setModal}) => {
+	
   return (
 	<Box h="100vh" w="98vw"
 	 border="1px red solid" 
@@ -13,7 +13,7 @@ const CustomModal = () => {
 	 zIndex={2}
 	 top={0}
 	 left={0}
-	 display={show}
+	 display={show?"block":"none"}
 	 >
 		<Flex justify="space-between" align="center" mb={-7} >
 		<Image
@@ -23,8 +23,8 @@ const CustomModal = () => {
           width={250}
           alt="logo"
         />
-		<ImCross fontSize={30} color="white" onClick={()=>{setShow("none")
-	alert("shakil")}}/>
+		<ImCross fontSize={30} color="white" onClick={()=>{setModal(false)
+	}}/>
 		</Flex>
 		<VStack spacing={8}>
 			<Heading color="white" fontSize={28}>

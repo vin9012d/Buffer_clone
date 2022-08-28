@@ -138,7 +138,7 @@ export const Navbar = () => {
         {/* </Button> */}
       </Flex>
 {
-  showModal? <CustomModal/>:""
+  showModal? <CustomModal show={showModal} setModal={setShowModal}/>:""
 }
 
 

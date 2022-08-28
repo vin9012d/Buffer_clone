@@ -5,7 +5,7 @@ import axios from 'axios'
 const getChannels = () =>(dispatch)=> {
     dispatch({ type: GET_CHANNELS_REQUEST });
     
-    return axios.get('http://localhost:8080/channels')
+    return axios.get('https://bufferclone.herokuapp.com/channels')
         .then((res) => {
         dispatch({type:GET_CHANNELS_SUCCESS,payload:res.data})
         })
@@ -18,9 +18,9 @@ const addChannels = (payload) => (dispatch)=>{
      
     dispatch({ type: ADD_CHANNELS_REQUEST });
     
-    return axios.post("http://localhost:8080/channels", payload)
+    return axios.post("https://bufferclone.herokuapp.com/channels", payload)
         .then((res) => {
-        dispatch({type:ADD_CHANNELS_SUCCESS})
+       return dispatch({type:ADD_CHANNELS_SUCCESS})
         })
         .catch((e) => {
             dispatch({type:ADD_CHANNELS_FAILURE})
@@ -30,7 +30,7 @@ const addChannels = (payload) => (dispatch)=>{
 
 const deleteChannels = (id) => (dispatch) => {
     dispatch({ type: DELETE_CHANNELS_REQUEST })
-   return  axios.delete(`http://localhost:8080/channels/${id}`)
+   return  axios.delete(`https://bufferclone.herokuapp.com/channels/${id}`)
         .then((res) => {
      return    dispatch({type:DELETE_CHANNELS_SUCCESS})
         })
@@ -42,7 +42,7 @@ const deleteChannels = (id) => (dispatch) => {
 const getFacebookData = () => (dispatch) => {
     dispatch({ type: GET_FACEBOOKDATA_REQUEST })
     
-    return axios.get("http://localhost:8080/facebookData")
+    return axios.get("https://bufferclone.herokuapp.com/facebookData")
         .then((res) => {
         dispatch({type:GET_FACEBOOKDATA_SUCCESS,payload:res.data})
         })
@@ -57,7 +57,7 @@ const getInstagramData = () => (dispatch) => {
     dispatch({ type: GET_INSTAGRAMDATA_REQUEST })
     
 
-    return axios.get(" http://localhost:8080/instagramData")
+    return axios.get(" https://bufferclone.herokuapp.com/instagramData")
         .then((res) => {
         dispatch({type:GET_INSTAGRAMDATA_SUCCESS,payload:res.data})
         }).catch((e) => {

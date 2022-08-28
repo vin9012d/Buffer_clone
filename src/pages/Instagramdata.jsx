@@ -208,17 +208,17 @@ export const Instagramdata = () => {
                   {/* <Input w="80%" /> */}
                   <Select defaultChecked={1}  w="80%">
  
-                      {channels.length > 0 && channels.map((item) => (
-                          <option value={item.id}>
-                            <Flex gap="10px" alignItems="center">
-                        
-                             <Box>
-                  <Text>{ item.page}</Text>
-                  <Text>{item.ids }</Text>
-                </Box>
-              </Flex>
-                          </option>
-                      ))}
+ {channels.length > 0 && channels.map((item) => (
+     <option value={item.id}>
+       
+   
+    
+{ item.page}
+{item.ids }
+
+
+     </option>
+ ))}
 </Select>
         </Flex>
         <Flex flexGrow={1}  justifyContent="end"  >
@@ -229,7 +229,7 @@ export const Instagramdata = () => {
       </Flex>
 
       <Box>
-        <Flex gap="30px" shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" p="10px 10px 10px 10px" mt="30px">
+        <Flex gap="30px" shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" p="10px 10px 10px 10px" mt="30px" >
           <Box p="5px" _hover={{
                             background:
                                 "#2c4bff",

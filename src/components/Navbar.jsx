@@ -1,5 +1,8 @@
 import { Flex, Spacer, Center, Image, Text, Box, Button, useDisclosure, Heading, Container, VStack, Input } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from '../redux/Authreducer/action';
+
 import {
   Menu,
   MenuButton,
@@ -22,7 +25,12 @@ import CustomModal from './CustomModal';
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showModal,setShowModal]=useState(false)
- 
+  const auth = useSelector((store) => store.Authreducer.isAuth);
+  const dispatch = useDispatch()
+
+ const logout1 =()=>{
+    dispatch(logout())
+ }
 
   return (
     <Flex p="15px 5%" justify="space-between" align="center" cursor="pointer">
@@ -132,7 +140,7 @@ export const Navbar = () => {
       </Flex>
       <Flex align="center" gap={5}>
         <Box>
-          <Link to={"/login" }color="rgb(44, 75, 255)" fontSize="20px">Log in</Link>
+          <Link to={"/login" }color="rgb(44, 75, 255)" fontSize="20px">{!auth?"Log in":<Box onClick={logout1}>Log Out</Box>}</Link>
         </Box>
         <Link to={"/publishing"}>        <Button colorScheme='messenger' variant='solid'>Get started now</Button> </Link>
 

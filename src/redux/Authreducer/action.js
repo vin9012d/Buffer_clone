@@ -11,4 +11,7 @@ const login = (payload) => (dispatch) => {
         .then((r) => dispatch({type: types.USER_LOGIN_SUCCESS, payload: r.data.token}))
         .catch((e) => dispatch({type: types.USER_LOGIN_FAILURE }));
 };
-export { login };
+const logout = (payload) => (dispatch) => {
+    dispatch({ type: types.USER_LOGOUT_SUCCESS });
+};
+export { login ,logout};

@@ -9,9 +9,9 @@ const AltNavbar = () => {
   return (
     <>
       <Flex
-        border="1px solid black"
         alignItems="center"
         justifyContent="space-between"
+        boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
       >
         <Flex alignItems="center">
           <NavLink to="#">

@@ -65,7 +65,6 @@ const CalendarComponent = () => {
     setAllEvents([...allEvents, newEvent]);
   };
 
-  console.log(allEvents);
 
   const handleEvent = (value) => {
     setNewEvent({ title: `${value}`, start: new Date(), end: new Date() });

@@ -7,6 +7,8 @@ import { FaUserFriends } from "react-icons/fa";
 import { BsCaretDownFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import {Link} from "react-router-dom"
+
 
 const InnerModal = ({show,setModal}) => {
   return (
@@ -20,13 +22,13 @@ const InnerModal = ({show,setModal}) => {
 	 display={show}
 	 >
 		<Flex justify="space-between" align="center" mb={-7} >
-		<Image
+		<Link to={"/"}><Image
           // border="1px"
           src="https://logodix.com/logo/2043884.jpg"
 
           width={250}
           alt="logo"
-        />
+        /></Link>
 		<ImCross fontSize={"30px"} color="white" onClick= {()=>{setModal(false)
 	}}/>
 		</Flex>
@@ -35,7 +37,7 @@ const InnerModal = ({show,setModal}) => {
           
           
           <Flex display= {"block"}>
-            <NavLink to="#">
+            <NavLink to="/publishing">
               <Box
                 p="1.2rem"
                 pl="28px"
@@ -48,7 +50,7 @@ const InnerModal = ({show,setModal}) => {
                 </Text>
               </Box>
             </NavLink>
-            <NavLink to="#">
+            <NavLink to="/analytics">
               <Box
                 p="1.2rem"
                 pl="28px"
@@ -61,7 +63,7 @@ const InnerModal = ({show,setModal}) => {
                 </Text>
               </Box>
             </NavLink>
-            <NavLink to="#">
+            <NavLink to="/engagement">
               <Box
                 p="1.2rem"
                 pl="28px"

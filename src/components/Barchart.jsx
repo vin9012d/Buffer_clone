@@ -7,7 +7,6 @@ import { Box } from "@chakra-ui/react";
 
 
 function Barchart({ data }) {
-      console.log(data,"bar")
       const options = {
         maintainAspectRatio: false,
         responsive: true,

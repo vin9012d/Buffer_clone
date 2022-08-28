@@ -19,7 +19,6 @@ export const Channeldelete = ({ id }) => {
   const handleDelete = (id) => {
       
     dispatch(deleteChannels(id)).then((res) => {
-      console.log(res, 'response')
       if (res.type == "DELETE_CHANNELS_SUCCESS") {
         dispatch(getChannels()).then(() => {
           

@@ -31,14 +31,11 @@ export function ChannelModal() {
   const finalRef = React.useRef(null)
   const handleData = (e) => {
     const { name, value } = e.target;
-    console.log(value, 'value')
-    console.log(data)
     setData({ ...data, [name]: value })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit")
     const payload = {
       ...data,
       logo: "https://media.istockphoto.com/photos/smart-home-symbol-picture-id1314037715?b=1&k=20&m=1314037715&s=170667a&w=0&h=vFoSrBkotNvWgwfQz013ZuLzGw0aWJfLeMkCPTuAxQY="

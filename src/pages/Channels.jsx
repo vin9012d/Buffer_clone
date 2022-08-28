@@ -18,7 +18,6 @@ import AltNavbar from '../components/AltNavbar'
 export const Channels = () => {
 
   const data = useSelector(store => store.Appreducer.ids)
-  console.log(data,'channels')
   const dispatch = useDispatch()
   
 

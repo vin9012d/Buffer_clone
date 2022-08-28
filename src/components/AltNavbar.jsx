@@ -151,12 +151,11 @@ const AltNavbar = () => {
               gap="8px"
               _hover={{ backgroundColor: "#F5F5F5" }}
             >
-              <Text color="#D5C4BA">soumyanil22@gmail.com</Text>
+              <Text color="#D5C4BA">eve.holt@reqres.in</Text>
               <FaUserCircle
                 icon="fa-duotone"
                 size="26px"
                 color="#121E66"
-                swapOpacity
               />
             </Flex>
           </NavLink>

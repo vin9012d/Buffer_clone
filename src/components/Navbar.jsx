@@ -33,9 +33,9 @@ export const Navbar = () => {
  }
 
   return (
-    <Flex p="15px 5%" justify="space-between" align="center" cursor="pointer">
+    <Flex p="15px 5%" justify="space-between" align="center" cursor="pointer" width="99%">
 
-      <Link to={"/"}> <Box  w="100px">
+      <Link to={"/"}> <Box  w="100px" display={[ "none", "flex","flex", "flex", "flex"]}>
 
         <Image
           // border="1px"
@@ -140,9 +140,9 @@ export const Navbar = () => {
       </Flex>
       <Flex align="center" gap={5}>
         <Box>
-          <Link to={"/login" }color="rgb(44, 75, 255)" fontSize="20px">{!auth?"Log in":<Box onClick={logout1}>Log Out</Box>}</Link>
+          <Link to={"/login" }color="rgb(44, 75, 255)" fontSize="20px">{!auth?"Login":<Box onClick={logout1}>LogOut</Box>}</Link>
         </Box>
-        <Link to={"/publishing"}>        <Button colorScheme='messenger' variant='solid'>Get started now</Button> </Link>
+        <Link to={"/publishing"}><Button colorScheme='messenger' variant='solid'>Get started now</Button> </Link>
 
         {/* <Button 
         display={["block","block","block","none","none"]}

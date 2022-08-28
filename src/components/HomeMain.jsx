@@ -8,8 +8,8 @@ const HomeMain = () => {
 	return (
 		<>
 			{/* #1 video button & content */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
-				<Box border="solid 1px red">
+			<Flex align="center" p="5% 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
+				<Box >
 					<Heading as='h2' size='xl' noOfLines={2}>
 						Grow your audience on social and beyond
 					</Heading>
@@ -30,14 +30,14 @@ const HomeMain = () => {
 				</Box>
 				<Box>
 					<Image
-						border="1px green solid"
+						
 						src="https://buffer.com/static/illustrations/all-channels-3.webp"
 					/>
 				</Box>
 			</Flex>
 
 			{/* Be where your customers are */}
-			<Flex direction="column">
+			<Flex direction="column" p="5% 0">
 				<Box d="flex" direction="column" align="center">
 					<Heading as='h2' size='xl' noOfLines={1}>
 						Be where your customers are
@@ -57,21 +57,23 @@ const HomeMain = () => {
 					<Image src="https://buffer.com/static/misc/buffer-loop-v2.svg"
 						maxW="100%"
 						w="100%"
+						h={300}
+
 
 						p="1rem 0"
 
 
 
-						border="1px red solid"
+						// border="1px red solid"
 					/>
 				</Box>
 
 			</Flex>
 
 			{/* Analyse part */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
+			<Flex align="center"  p="5% 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
 
-				<Box border="solid 1px red" >
+				<Box  >
 					<Heading fontSize={20} color="#2039f4">
 						1. ANALYSE
 					</Heading>
@@ -97,7 +99,7 @@ const HomeMain = () => {
 				<Box w="80%">
 
 					<Image
-						border="1px red solid"
+						// border="1px red solid"
 
 						src="https://buffer.com/static/illustrations/thumb-stop-content-2.webp"
 
@@ -108,16 +110,16 @@ const HomeMain = () => {
 
 
 			{/* ....plan and publish.... */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column-reverse", "column-reverse", "row"]}>
+			<Flex align="center"  p="5% 6%" textAlign={["center", "center", "left"]} direction={["column-reverse", "column-reverse", "row"]}>
 				<Box w="80%">
 					<Image
-						border="1px red solid"
+						// border="1px red solid"
 
 						src="https://buffer.com/static/illustrations/collaborate-more-efficiently@2x.webp"
 
 					/>
 				</Box>
-				<Box border="solid 1px red" >
+				<Box  >
 					<Heading fontSize={20} color="#2039f4">
 						2. PLAN AND PUBLISH YOUR CONTENT
 					</Heading>
@@ -142,8 +144,8 @@ const HomeMain = () => {
 			</Flex>
 
 			{/* Engage */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]}>
-				<Box border="solid 1px red">
+			<Flex align="center"  p="0 6%" textAlign={["center", "center", "left"]} direction={["column", "column", "row"]} m="50px 0">
+				<Box >
 					<Heading fontSize={20} color="#2039f4">
 						3. ENGAGE
 					</Heading>
@@ -169,7 +171,7 @@ const HomeMain = () => {
 				</Box>
 				<Box w="80%">
 					<Image
-						border="1px green solid"
+						// border="1px green solid"
 						src="https://buffer.com/static/illustrations/hero-reply@2x-2.webp"
 					/>
 				</Box>
@@ -179,7 +181,7 @@ const HomeMain = () => {
 			<Sliding />
 
 			{/* ...buffer achievements */}
-			<Flex justify="space-around" direction={["column", "column", "column", "row"]}>
+			<Flex justify="space-around" direction={["column", "column", "column", "row"]} mb="20px">
 				<VStack>
 					<Heading color="#2039f4">
 						10 years
@@ -215,14 +217,14 @@ const HomeMain = () => {
 			</Flex>
 
 			{/* help center navigator */}
-			<Flex align="center" border="2px red solid" p="0 6%" textAlign={["center", "center", "left"]} direction={["column-reverse", "column-reverse", "row"]} gap="1rem">
+			<Flex align="center"  p="5% 6%" textAlign={["center", "center", "left"]} direction={["column-reverse", "column-reverse", "row"]} gap="1rem">
 				<Box w="80%">
 					<Image
-						border="1px green solid"
+						// border="1px green solid"
 						src="https://static.buffer.com/cdn-cgi/image/w=1080,quality=90,format=auto/marketing/static/team/buffer-team-map-2022@2x.jpg"
 					/>
 				</Box>
-				<Box border="solid 1px red">
+				<Box >
 					<Heading as='h2' size='xl' noOfLines={2}>
 						And we are here to help
 					</Heading>
@@ -241,7 +243,7 @@ const HomeMain = () => {
 
 			</Flex>
 			{/* ...marketing partners */}
-			<Box w="50%" m="auto" textAlign="center" border="1px solid red" gap="20px">
+			<Box w="50%" m="30px auto" textAlign="center"  gap="20px">
 				<Heading mb="2rem">
 					An official marketing partner of the industry leaders
 				</Heading>

@@ -1,11 +1,15 @@
 import { Box, Container, Heading, VStack, Image, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { data } from "../slidingData.js"
+import { data } from "../slidingData.js";
+import React from 'react'
+import Ticker from 'react-ticker'
 
 import "./Sliding_S.css"
 
-const Card = ({ id, avatar }) => {
+const Card = (props ) => {
+	console.log(props,"props")
+	const {id,avatar}=props;
 	return (
 		<Box>
 			<VStack border="1px green solid"
@@ -18,7 +22,7 @@ const Card = ({ id, avatar }) => {
 				boxShadow="rgb(0 0 0 / 20%) 0px 0px 30px -1px" >
 				<Image
 					pos="absolute"
-					top={-12}
+					top={-10}
 					borderRadius='full'
 					boxSize='110px'
 					src={avatar}
@@ -44,49 +48,37 @@ const Card = ({ id, avatar }) => {
 }
 
 export default function Sliding() {
-	const [width, setWidth] = useState(0);
-	const carousel = useRef();
 
-	useEffect(() => {
-		setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-	}, [])
+
 
 
 	return (
-		
-		<motion.div ref={carousel} className="carousel"
-		>
-			<motion.div drag="x"
-				dragConstraints={{ right: 0, left: -width }}
-				className="inner-carousel">
 
-				{
-					data.map((item) => {
-						return (
-							<Card {...item} />
-						)
-					})
-				}
-			</motion.div>
-		</motion.div>
-	
+<Box p="10% 0" >
+
+
+
+
+		<Ticker>
+			{() => (
+			
+
+
+					<Card {...data[0]} />
+
+
+			)}
+
+		</Ticker>
+		</Box>
+
+
 	)
 }
 
-{/* <VStack border="1px green solid" w="400px" >
-<Image
-	borderRadius='full'
-	boxSize='150px'
-	src="https://buffer.com/static/testimonials/luis-cancel-huckberry-mobile.jpg"
-	alt='Luis Cancel'
-/>
-<Container>
-	Buffer has made sharing our story and building our brand on social media so much easier.
-</Container>
-<Image
-	boxSize="150px"
-	src="https://miro.medium.com/max/1050/1*Szxnu0tuAF0Utt6xDnBq4w.jpeg" />
-<Heading fontSize={20}>
-	Luis Cancel, Managing Editor
-</Heading>
-</VStack> */}
+
+
+
+
+
+

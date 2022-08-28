@@ -12,6 +12,7 @@ const AltNavbar = () => {
   return (
     <>
       <Flex
+
         border="0.1px solid grey"
         alignItems="center"
         justifyContent="space-between"
@@ -20,6 +21,7 @@ const AltNavbar = () => {
         width= {["100%", "100%", "100%", "100%", "100%"]}
         boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
         overflowX="hidden"
+
       >
           <HamburgerIcon fontSize={30} display={["block", "block", "block", "block", "none"]} onClick={() => { setShowModal(true) }} />
         <Flex alignItems="center" 

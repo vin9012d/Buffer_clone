@@ -12,7 +12,7 @@ import { Channels } from './Channels'
 
 
 
-export const Facebookdata = () => {
+export const Instagramdata = () => {
   const labels = ['Aug2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22'];
   
   const selectora = useSelector(store => store.Appreducer.data)
@@ -171,7 +171,7 @@ export const Facebookdata = () => {
         if (selectora.length == 0) {
           
        
-            dispatch(getFacebookData()) 
+            dispatch(getInstagramData()) 
             
          
           }
@@ -208,17 +208,17 @@ export const Facebookdata = () => {
                   {/* <Input w="80%" /> */}
                   <Select defaultChecked={1}  w="80%">
  
-                      {channels.length > 0 && channels.map((item) => (
-                          <option value={item.id}>
-                            
-                        
-                         
-                 { item.page}
-                  {item.ids }
-               
-              
-                          </option>
-                      ))}
+ {channels.length > 0 && channels.map((item) => (
+     <option value={item.id}>
+       
+   
+    
+{ item.page}
+{item.ids }
+
+
+     </option>
+ ))}
 </Select>
         </Flex>
         <Flex flexGrow={1}  justifyContent="end"  >

@@ -20,20 +20,20 @@ export const Mainroute = () => {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/pricing" element={<Pricing />} />
-          {/* <Route path="/pricing" element={
+          {/* <Route path="/pricing" element={<Pricing />} /> */}
+          <Route path="/publishing" element={
                 <ReqAuth>
-                    <Pricing />
+                    <Publishing />
                 </ReqAuth>
                 } 
-            /> */}
+            />
           <Route path="/customer" element={<Customer />} />
           <Route path="/channels" element={<Channels />} />
           <Route path="/channels/addchannel" element={<Addcannel />} />
           <Route path="/engagement" element={<Engagement />} />
-          <Route path="/analytics" element={<Analytics />} />
+          {/* <Route path="/analytics" element={<Analytics />} /> */}
       <Route path="/publishing" element={<Publishing />} />
-      <Route path="/facebookanalytics" element={<Facebookanalytics />} />
+      <Route path="/analytics" element={<Facebookanalytics />} />
       <Route path="/instagramanalytics" element={<Instagramanalytics />} />
       
       

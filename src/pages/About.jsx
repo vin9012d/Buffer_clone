@@ -6,11 +6,15 @@ import Sdop from "../Robin_img/Sdop.jpg"
 import Three from "../Robin_img/Three.jpg"
 import White from "../Robin_img/White.png"
 import { BsChevronRight } from "react-icons/bs";
+import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
 
 
 export const About = () => {
   return (
+
     <Box>
+      <Navbar />
       <Box width={"100%"} height="100vh" backgroundColor={"rgb(238,157,171)"} textAlign="center" paddingTop={"10vh"}>
         <Heading >About Us</Heading>
         <img style={{ margin: "auto", marginTop: "5vh" }} src="https://static.buffer.com/cdn-cgi/image/w=750,quality=90,format=auto/marketing/static/team/buffer-group-photo.jpg" alt="" />
@@ -92,6 +96,7 @@ export const About = () => {
       </Box>
       <img style={{ margin: "auto", marginTop: "10vh", height: "110vh", width: "45%" }} src={Three} alt="" />
       <Box textAlign={"center"} mt="10vh"><Button border="1px solid rgb(44,75,255)" color="rgb(44,75,255)">Get to know us better</Button></Box>
+      <Footer />
     </Box>
   )
 }

@@ -13,21 +13,21 @@ const AltNavbar = () => {
     <>
       <Flex
 
-        border="0.1px solid grey"
+      
         alignItems="center"
         justifyContent="space-between"
-        borderRight={"none"}
-        borderTop={"none"}
+       
         width= {["100%", "100%", "100%", "100%", "100%"]}
-        boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
+        boxShadow={" rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"}
         overflowX="hidden"
+        
 
       >
           <HamburgerIcon fontSize={30} display={["block", "block", "block", "block", "none"]} onClick={() => { setShowModal(true) }} />
         <Flex alignItems="center" 
         display={[ "none", "none","none", "none", "flex"]}
         width= {["0%", "0%", "0%", "0%", "50%"]}>
-          <NavLink to="#">
+          <NavLink to="/">
             <Flex pr="20px" pl="20px" gap="1">
               <Image
                 w="18px"
@@ -39,7 +39,7 @@ const AltNavbar = () => {
             </Flex>
           </NavLink>
           <Flex>
-            <NavLink to="#">
+            <NavLink to="/publishing">
               <Box
                 p="1.2rem"
                 pl="28px"
@@ -52,7 +52,7 @@ const AltNavbar = () => {
                 </Text>
               </Box>
             </NavLink>
-            <NavLink to="#">
+            <NavLink to="/analytics">
               <Box
                 p="1.2rem"
                 pl="28px"
@@ -65,7 +65,7 @@ const AltNavbar = () => {
                 </Text>
               </Box>
             </NavLink>
-            <NavLink to="#">
+            <NavLink to="/engagement">
               <Box
                 p="1.2rem"
                 pl="28px"

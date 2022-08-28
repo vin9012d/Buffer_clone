@@ -17,6 +17,7 @@ import { GrOrganization } from 'react-icons/gr'
 import { BsArrowLeft } from 'react-icons/bs'
 import { BiLeftArrowAlt } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
+import AltNavbar from '../components/AltNavbar'
 
 export const Addcannel = () => {
 const hoverref=useRef()
@@ -69,7 +70,9 @@ const hoverref=useRef()
 ]
 
   return (
-    <Box>    <Flex m="auto" w="100%" h="85vh" border="1px solid green" >
+<Box>
+<AltNavbar />
+    <Box>    <Flex m="auto" w="100%" h="85vh"  >
         <Box h="85vh" bg="#f5f5f5"  w="200px" p="10px" >
              <Box pl="10px" >Settings</Box>
         <Divider  borderColor="black.200" mt="4%" mb="4%" />
@@ -115,7 +118,7 @@ const hoverref=useRef()
               </Flex>
     </Box>
     <Flex m="auto" w={["90%","90%","50%"]} h="100%" justifyContent="center" >
-      <Box border="1px solid black" w="100%"  >
+      <Box  w="100%"  >
           <Text fontSize={["xl","xl","4xl"]} textAlign={["center","center","left"]} as="b">Connect a new channel</Text>
           <Text mb="25px" textAlign={["center","center","left"]}>Looking for step-by-step instructions? Visit our Help Center to read our Getting Started guides and learn about supported channel types.</Text>
           <SimpleGrid columns={[2, 2, 3]} gap={6} justifyContent="center">
@@ -140,7 +143,8 @@ const hoverref=useRef()
 
     </Flex>
     </Flex>
-    </Box>
+      </Box>
+      </Box>
 
   )
 }

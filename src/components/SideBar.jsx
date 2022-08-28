@@ -3,7 +3,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { HiTrendingUp } from "react-icons/hi";
 import { TbList } from "react-icons/tb";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const sideBar = () => {
   return (
@@ -21,7 +21,7 @@ const sideBar = () => {
               w="90%"
               borderRadius="4px"
               pl="5px"
-              border="1px solid black"
+            
               alignItems="center"
               gap="5px"
               m="auto"
@@ -82,7 +82,7 @@ const sideBar = () => {
           </Box>
         </Box>
         <Box mb="10px">
-          <NavLink to="#">
+          <NavLink to="/channels">
             <Flex
               justifyContent="center"
               alignItems="center"
@@ -98,7 +98,7 @@ const sideBar = () => {
                 border: "1px solid grey",
               }}
             >
-              <Text color="grey" fontSize="sm" fontWeight="semibold">
+           <Text color="grey" fontSize="sm" fontWeight="semibold"> 
                 Manage Channels
               </Text>
             </Flex>

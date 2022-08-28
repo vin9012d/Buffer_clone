@@ -202,7 +202,7 @@ export const Facebookdata = () => {
   
    
   return (
-    <Box border="1px solid black" p="20px" maxH="80vh" overflow="scroll" w="100%">
+    <Box border="1px solid black"  p="20px" maxH="90vh" overflow="scroll" w="100%">
       <Flex shadow=" rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;" p="10px 10px 10px 10px">
         <Flex flexGrow={1}  >
                   {/* <Input w="80%" /> */}

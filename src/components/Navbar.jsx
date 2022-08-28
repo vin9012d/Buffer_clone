@@ -1,4 +1,5 @@
-import { Flex, Spacer, Center, Image, Text, Box, Button, Link, useDisclosure, Heading, Container, VStack,Input } from '@chakra-ui/react';
+import { Flex, Spacer, Center, Image, Text, Box, Button, useDisclosure, Heading, Container, VStack, Input } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
 import {
   Menu,
   MenuButton,
@@ -24,8 +25,9 @@ export const Navbar = () => {
  
 
   return (
-    <Flex p="15px 5%" justify="space-between" align="center">
-      <Box  w="100px">
+    <Flex p="15px 5%" justify="space-between" align="center" cursor="pointer">
+
+      <Link to={"/"}> <Box  w="100px">
 
         <Image
           // border="1px"
@@ -34,7 +36,7 @@ export const Navbar = () => {
           width="100px"
           alt="logo"
         />
-      </Box>
+      </Box></Link>
       <Flex  gap={12} fontSize={20} display={["none", "none", "none", "flex"]}>
 
         <Menu isOpen={isOpen} w={100}>
@@ -95,7 +97,8 @@ export const Navbar = () => {
               </Flex>
               </MenuItem>
               {/* 4. */}
-            <MenuItem><Flex>
+            <MenuItem>
+              <Flex>
                 <FiPenTool fontSize={26} />
                 <VStack ml={3} align="flex-start" >
                   <Heading fontSize={16}>
@@ -119,18 +122,20 @@ export const Navbar = () => {
         <Box>
           Blog
         </Box>
+        <Link to={"/about"}>
         <Box>
           About
-        </Box>
+        </Box></Link>
         <Box>
           Customers
         </Box>
       </Flex>
       <Flex align="center" gap={5}>
         <Box>
-          <Link to="/login" color="rgb(44, 75, 255)" fontSize="20px">Log in</Link>
+          <Link to={"/login" }color="rgb(44, 75, 255)" fontSize="20px">Log in</Link>
         </Box>
-        <Button colorScheme='messenger' variant='solid'>Get started now</Button>
+        <Link to={"/publishing"}>        <Button colorScheme='messenger' variant='solid'>Get started now</Button> </Link>
+
         {/* <Button 
         display={["block","block","block","none","none"]}
         > */}

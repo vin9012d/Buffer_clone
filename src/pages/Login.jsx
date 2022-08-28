@@ -23,7 +23,7 @@ const Login = () => {
         {
           
           // navigate(comingfrom,{replace:true})
-          navigate("/")
+          navigate("/publishing")
 
         }
       })

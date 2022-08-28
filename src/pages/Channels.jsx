@@ -12,6 +12,7 @@ import {BiDotsVerticalRounded} from "react-icons/bi"
  import {MdCloudDone } from "react-icons/md"
 import { Channeldelete } from '../components/Channeldelete'
 import { Link } from 'react-router-dom'
+import AltNavbar from '../components/AltNavbar'
 
 
 export const Channels = () => {
@@ -28,6 +29,8 @@ export const Channels = () => {
     }
   },[])
   return (
+    <Box>
+      <AltNavbar />
     <Box>
     <Flex >
       <Box h="85vh" bg="#f5f5f5"  w="200px" p="10px" >
@@ -74,15 +77,15 @@ export const Channels = () => {
                
               </Flex>
     </Box>
-      <Box m="auto" w="100%"  h="85vh" border="1px solid green" bg="#f5f5f5"  >
+      <Box m="auto" w="100%"  h="85vh"  bg="#f5f5f5"  >
         <Flex m="auto" w={["90%","90%","60%","50%"]} h="100%" justifyContent="center" >
-          <Box border="1px solid black" w="100%"   >
+          <Box  w="100%"   >
             <Flex  w="100%" justifyContent="space-between" flexDirection={["column","column","row"]} alignItems="center" p="10px" >
                 <Text fontSize="4xl" as="b"> Channels</Text>
-                <Link to={'/channel'}>
+                <Link to={'/channels/addchannel'}>
               <Button bg="#2c4bff" color="white">Connect channel</Button> </Link>
             </Flex>
-            <Box border="1px solid red" pl="35px" pr="35px" pt="15px" pb="15px" shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' bg="white">
+            <Box  pl="35px" pr="35px" pt="15px" pb="15px" shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' bg="white">
             <Flex alignItems="center" gap={2} >
                   <Icon h={19} w={19} ml="-10px"   as={MdAccountCircle} />
                   Account
@@ -93,7 +96,7 @@ export const Channels = () => {
             </Box>
             <Box p="15px"> <Text fontSize="xl" as="b"> { data.length} Channels Connected </Text></Box>
             {data?.length > 0 && data.map((item) => (
-            <Box key={item.id} border="1px solid green" shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' bg="white" mb="15px">           <Flex  p="20px" justifyContent="space-between" alignItems="center">
+            <Box key={item.id} shadow='rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;' bg="white" mb="15px">           <Flex  p="20px" justifyContent="space-between" alignItems="center">
               <Flex gap="10px" alignItems="center">
                 <Img w="40px" h="40px" src={item.logo}  alt="item.ids"/>
                 <Box>
@@ -122,6 +125,7 @@ export const Channels = () => {
    
       </Box>
     </Flex>
-    </Box>
+      </Box>
+      </Box>
   )
 }

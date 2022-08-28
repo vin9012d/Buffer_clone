@@ -1,4 +1,4 @@
-import { Button, Flex, Heading,Text, VStack} from '@chakra-ui/react'
+import { Button, Flex, Heading,SimpleGrid,Text, VStack} from '@chakra-ui/react'
 import React from 'react'
 import { BsPinterest, BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs"
 import { FaFacebookF, FaTiktok,FaGooglePlay,FaApple } from "react-icons/fa"
@@ -7,12 +7,14 @@ import { FaFacebookF, FaTiktok,FaGooglePlay,FaApple } from "react-icons/fa"
 
 export const Footer = () => (
   <>
-    <Flex p="5%" border="2px red solid" justify="space-between">
-      <Flex direction="column" border="1px grey solid">
-        <Heading mb="3rem" fontSize={46}>
+    <SimpleGrid columns={[2,2,3,4,5]} p="5%"  justify="space-between" align={["center","center","center","flex-start"]} direction={["column","column","column","row"]}>
+      <Flex direction="column"
+      mb="20px" 
+      mr="20px">
+        <Heading fontSize={[18,22,30,46]}>
           Buffer
         </Heading>
-        <Flex gap="1rem" fontSize={25} m="1rem 0">
+        <Flex gap="1rem" fontSize={25} mt={[".75rem",".75rem","1rem","1.5rem"]}>
           <BsInstagram />
           <FaFacebookF />
           <BsTwitter />
@@ -43,7 +45,8 @@ export const Footer = () => (
           Buffer | Privacy | Terms | Security
         </Text>
       </Flex>
-      <VStack border="1px red solid" align="flex-start">
+      <VStack  align={["center","center","center","flex-start"]}
+      mb="20px">
         <Heading fontSize={22}>
           Tools
         </Heading>
@@ -63,7 +66,9 @@ export const Footer = () => (
           Extras
         </Text>
       </VStack>
-      <VStack border="1px red solid" align="flex-start">
+      <VStack align={["center","center","center","flex-start"]}
+      mb="20px"
+      >
         <Heading fontSize={22}>
           Resouces
         </Heading>
@@ -82,7 +87,10 @@ export const Footer = () => (
         
       </VStack>
 
-      <VStack border="1px red solid" align="flex-start">
+      <VStack 
+      align={["center","center","center","flex-start"]}
+      mb="20px"
+      >
         <Heading fontSize={22}>
           Support
         </Heading>
@@ -101,7 +109,10 @@ export const Footer = () => (
        
       </VStack>
 
-      <VStack border="1px red solid" align="flex-start">
+      <VStack  
+      align={["center","center","center","flex-start"]}
+      // align="flex-start"
+      >
         <Heading fontSize={22}>
           Company
         </Heading>
@@ -124,6 +135,6 @@ export const Footer = () => (
           Sitemap
         </Text>
       </VStack>
-    </Flex>
+    </SimpleGrid>
   </>
 )

@@ -9,10 +9,10 @@ import { Mainroute } from "./pages/Mainroute";
 function App() {
   return (
     <div className="App">
-      <Addcannel/>
+      {/* <Addcannel/>
       <Channels />
       <LineChart />
-      <Analytics />
+      <Analytics /> */}
       <Mainroute />
     </div>
   );

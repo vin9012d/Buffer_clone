@@ -12,6 +12,7 @@ import Instagramanalytics from './Instagramanalytics'
 import { Login } from './Login'
 import { Pricing } from './Pricing'
 import { Publishing } from './Publishing'
+import ReqAuth from './ReqAuth'
 
 export const Mainroute = () => {
   return (
@@ -20,6 +21,12 @@ export const Mainroute = () => {
           <Route path="/about" element={<About/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/pricing" element={<Pricing />} />
+          {/* <Route path="/pricing" element={
+                <ReqAuth>
+                    <Pricing />
+                </ReqAuth>
+                } 
+            /> */}
           <Route path="/customer" element={<Customer />} />
           <Route path="/channels" element={<Channels />} />
           <Route path="/channels/addchannel" element={<Addcannel />} />

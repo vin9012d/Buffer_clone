@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { FaUserFriends } from "react-icons/fa";
 import { BsCaretDownFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import InnerModal from "./InnerModal";
 
 const AltNavbar = () => {
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <Flex
+
+        border="0.1px solid grey"
         alignItems="center"
         justifyContent="space-between"
-        boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+        borderRight={"none"}
+        borderTop={"none"}
+        width= {["100%", "100%", "100%", "100%", "100%"]}
+        boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
+        overflowX="hidden"
+
       >
-        <Flex alignItems="center">
+          <HamburgerIcon fontSize={30} display={["block", "block", "block", "block", "none"]} onClick={() => { setShowModal(true) }} />
+        <Flex alignItems="center" 
+        display={[ "none", "none","none", "none", "flex"]}
+        width= {["0%", "0%", "0%", "0%", "50%"]}>
           <NavLink to="#">
             <Flex pr="20px" pl="20px" gap="1">
               <Image
@@ -80,11 +93,12 @@ const AltNavbar = () => {
             </NavLink>
           </Flex>
         </Flex>
-        <Flex alignItems="center">
+        <Flex alignItems="center" display={[ "none", "none","flex", "flex", "flex"]}
+        width= {["50%", "50%", "80%", "80%", "50%"]}>
           <NavLink to="#">
             <Flex
               alignItems="center"
-              gap="5px"
+              gap="4px"
               color="#2C4BFF"
               p="1.2rem"
               pl="28px"
@@ -104,7 +118,7 @@ const AltNavbar = () => {
               pr="28px"
               color="rgb(99, 99, 99)"
               _hover={{ backgroundColor: "#F5F5F5", color: "#433D3D" }}
-              gap="5px"
+              gap="4px"
             >
               <Text fontSize="14px" fontWeight="medium">
                 Apps
@@ -120,7 +134,7 @@ const AltNavbar = () => {
               pr="28px"
               color="rgb(99, 99, 99)"
               _hover={{ backgroundColor: "#F5F5F5", color: "#433D3D" }}
-              gap="5px"
+              gap="4px"
             >
               <Text fontSize="14px" fontWeight="medium">
                 Help
@@ -134,7 +148,7 @@ const AltNavbar = () => {
               p="1.2rem"
               pl="28px"
               pr="28px"
-              gap="10px"
+              gap="8px"
               _hover={{ backgroundColor: "#F5F5F5" }}
             >
               <Text color="#D5C4BA">soumyanil22@gmail.com</Text>
@@ -147,6 +161,9 @@ const AltNavbar = () => {
             </Flex>
           </NavLink>
         </Flex>
+        {
+          showModal? <InnerModal show={showModal} setModal={setShowModal}/>:""
+        }
       </Flex>
     </>
   );

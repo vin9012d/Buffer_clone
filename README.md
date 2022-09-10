@@ -1,5 +1,5 @@
 <h1 align="center"> Buffer Website Clone</h1>
-<h2>It's a application of managing all the social meadia account at one place with some additional features.  </h2>
+<h2>It's a application of managing all the social meadia account at one place with some additional features.  </h2>  
 
 <div>
 <h1>Deployment link</h1>
@@ -20,6 +20,9 @@ https://bufferr.netlify.app/
 <p>
 Buffer is a application of managing all the social meadia account at one place with some additional features. It is a collaborative project built by a team of 4 and executed in 5 days.
 </p>
+<p align="center">
+<img src="./public/home.png" />
+<p>
 
 <h2> Screens </h2>
 <ul>
@@ -44,11 +47,20 @@ Buffer is a application of managing all the social meadia account at one place w
 <li>View the comments and likes in the enagagements</li>
 </ul>
 
-<h2>Glimpses of Mini-Store</h2>
-<div>
+<h2>Glimpses of Buffer</h2>
+
+<p align="center">
+<img src="./public/home.png"  width=400 />
+<img src="./public/login.png"  width=400 />
+<img src="./public/calender.png" width=400 /> 
+<img src="./public/channel.png" width=400  />
+<img src="./public/addchannel.png"  width=400 />
+<img src="./public/engagement.png" width=400  />
+<img src="./public/graph.png" width=400  />
+<img src="./public/about.png"  width=400/>
 
 
-</div>
+</p>
 
 <h2>Getting Started</h2>
 <div>
@@ -86,6 +98,9 @@ npm run start
 <p align="left">
     <a href="https://www.linkedin.com/in/vin9012d/">
         <img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="https://www.linkedin.com/in/vin9012d/" />
+    </a>
+      <a title="vin9012c@gmail.com.com" href="mailto:vin9012c@gmail.com.com">
+        <img align="center" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="vin9012c@gmail.com" />
     </a>
  
     

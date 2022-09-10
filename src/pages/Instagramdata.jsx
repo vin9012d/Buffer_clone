@@ -42,7 +42,6 @@ export const Instagramdata = () => {
   
 
   const vinod = () => {
-    console.log("vinod",selector)
     setUserData({
       labels: selector?.map((data) => data.id+2+"aug"),
       datasets: [
@@ -163,7 +162,6 @@ export const Instagramdata = () => {
     //       },
     //     ],
     //   });
-  // console.log(selector, "selector")
   
       useEffect(() => {
         
@@ -196,9 +194,6 @@ export const Instagramdata = () => {
     }
   },[selector,selectora])
     
-//   console.log(selectora, 'selectora')
-//   console.log(selector, 'selector')
-    console.log(channels)
   
    
   return (

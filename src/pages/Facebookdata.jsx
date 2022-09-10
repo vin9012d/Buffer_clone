@@ -42,7 +42,6 @@ export const Facebookdata = () => {
   
 
   const vinod = () => {
-    console.log("vinod",selector)
     setUserData({
       labels: selector?.map((data) => data.id+2+"aug"),
       datasets: [
@@ -163,7 +162,6 @@ export const Facebookdata = () => {
     //       },
     //     ],
     //   });
-  // console.log(selector, "selector")
   
       useEffect(() => {
         
@@ -196,9 +194,6 @@ export const Facebookdata = () => {
     }
   },[selector,selectora])
     
-//   console.log(selectora, 'selectora')
-//   console.log(selector, 'selector')
-    console.log(channels)
   
    
   return (
@@ -208,8 +203,8 @@ export const Facebookdata = () => {
                   {/* <Input w="80%" /> */}
                   <Select defaultChecked={1}  w="80%">
  
-                      {channels.length > 0 && channels.map((item) => (
-                          <option value={item.id}>
+                      {channels.length > 0 && channels.map((item,index) => (
+                          <option key={index} value={item.id}>
                             
                         
                          

@@ -5,6 +5,7 @@ import { login } from '../redux/Authreducer/action';
 import { USER_LOGIN_SUCCESS } from '../redux/Authreducer/actiontype';
 import { Box, Heading, Input, Button, Text } from "@chakra-ui/react"
 import Login1 from "../Robin_img/Login1.jpg"
+import {Link} from "react-router-dom"
 import {
   Alert,
   AlertIcon,
@@ -50,7 +51,7 @@ const Login = () => {
       )}
     <Box display="flex" width={"100%"}>
       <Box width={{ base: '100%', md: '50%', xl: '33%' }} overflowY="scroll" paddingLeft={"4%"} paddingRight="4%">
-        <img style={{ marginTop: "6vh", width: "35%" }} src="https://static.buffer.com/login/public/img/buffer-logo.svg" alt="" />
+        <Link to={"/"}> <img style={{ marginTop: "6vh", width: "35%" }} src="https://static.buffer.com/login/public/img/buffer-logo.svg" alt="" /></Link>
         <Heading mt="6vh" color={"rgba(71,71,71,255)"}>Log in</Heading>
         <Heading color={"rgba(71,71,71,255)"} mt="5vh" fontSize="15px">Email Address</Heading>
         <Input mt="2vh" type={"email"} height="7vh"

@@ -7,7 +7,6 @@ import { Navbar } from '../components/Navbar'
 export const Home = () => {
 
     const data = useSelector(store => store)
-    console.log(data)
   return (
     <>
     <Navbar/>

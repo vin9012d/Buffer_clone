@@ -30,7 +30,7 @@ export const About = () => {
       <Box width="100%" height="40vh" mt="15vh" backgroundImage="url('https://buffer.com/static/background/white-doodle-section.png')" backgroundSize="cover"
         backgroundPosition="50% 50%" backgroundColor={"rgb(245,245,245)"} backgroundRepeat="no-repeat"
         display={"flex"} justifyContent="center" alignItems={"center"}>
-          <Box display={"flex"} justifyContent="space-between" alignItems={"center"} width="70%" margin ="auto" >
+          <Box display={"flex"} justifyContent="space-between" overflowX="hidden" alignItems={"center"} width="70%" margin ="auto" >
             <Box textAlign={"center"}>
               <Heading color="rgb(135,194,33)" fontSize={"80px"}>84</Heading> 
               <Heading fontSize={"26px"} fontWeight="none">teammates</Heading>

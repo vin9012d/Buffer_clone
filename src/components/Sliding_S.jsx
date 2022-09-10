@@ -8,7 +8,6 @@ import Ticker from 'react-ticker'
 import "./Sliding_S.css"
 
 const Card = (props ) => {
-	console.log(props,"props")
 	const {id,avatar}=props;
 	return (
 		<Box>

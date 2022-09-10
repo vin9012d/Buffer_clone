@@ -2,6 +2,7 @@ import { Box, Flex,Heading,Image,VStack,Text,Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import {ImCross} from "react-icons/im";
 import {BiChevronRight} from "react-icons/bi"
+import {Link} from "react-router-dom"
 
 const CustomModal = ({show,setModal}) => {
 	
@@ -16,13 +17,13 @@ const CustomModal = ({show,setModal}) => {
 	 display={show?"block":"none"}
 	 >
 		<Flex justify="space-between" align="center" mb={-7} >
-		<Image
+		<Link to={"/"}><Image
           // border="1px"
           src="https://logodix.com/logo/2043884.jpg"
 
           width={250}
           alt="logo"
-        />
+        /></Link>
 		<ImCross fontSize={30} color="white" onClick={()=>{setModal(false)
 	}}/>
 		</Flex>
@@ -39,10 +40,10 @@ const CustomModal = ({show,setModal}) => {
 				Blog 
 				{/* <BiChevronRight/> */}
 			</Heading>
-			<Heading color="white" fontSize={28}>
+			<Link to={"/about"}><Heading color="white" fontSize={28}>
 				About 
 				{/* <BiChevronRight/> */}
-			</Heading>
+			</Heading></Link>
 			<Heading color="white" fontSize={28}>
 				Customer 
 				{/* <BiChevronRight/> */}
@@ -50,10 +51,10 @@ const CustomModal = ({show,setModal}) => {
 			<Button colorScheme="orange" fontSize={20} p={5}>
 				Get started now
 			</Button>
-			<Heading color="white" fontSize={28}>
+			<Link to={"/login"}><Heading color="white" fontSize={28}>
 				Log in
 				{/* <BiChevronRight/> */}
-			</Heading>
+			</Heading></Link>
 		</VStack>
 	</Box>
   )

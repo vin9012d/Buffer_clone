@@ -1,5 +1,5 @@
 <h1 align="center"> Buffer Website Clone</h1>
-<h2>It's a application of managing all the social meadia account at one place with some additional features.  </h2>  
+<h2>It's a application of managing all the social media account at one place with some additional features.  </h2>  
 
 <div>
 <h1>Deployment link</h1>

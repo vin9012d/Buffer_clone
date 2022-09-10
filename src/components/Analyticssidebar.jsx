@@ -33,7 +33,7 @@ const Analyticssidebar = () => {
                     <Divider borderColor="black.200" mt="4%" />
 
                     <Flex direction="column" mt="4%"  >
-                      <Link to={"/facebookanalytics"}> <Flex alignItems="center" p="6px" _hover={{
+                      <Link to={"/analytics"}> <Flex alignItems="center" p="6px" _hover={{
                             background:
                                 "#2c4bff",
                             color: "white",

@@ -184,7 +184,7 @@ export const Instagramdata = () => {
       }, [selectora,selector,channels])
 
   useEffect(() => {
-    if (selector.length == 0) {
+    if (selector.length == 0) {   
         setSelector(selectora)
         
     }

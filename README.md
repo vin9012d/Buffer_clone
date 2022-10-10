@@ -91,7 +91,7 @@ npm install
 <p>To run the application got to the client folder and run the following command:</P>
 
 ```
-npm 
+npm run start
 
 ```
 </div>
